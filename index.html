@@ -38,6 +38,7 @@
             width: 100%;
             height: 85vh; /* Reduzco la altura en un 30% */
             max-height: 85vh; /* Limita la altura máxima de la imagen */
+            object-fit: cover;
         }
 
         #banner-overlay {
@@ -113,8 +114,11 @@
             background-color: #00a4a3;
             color: white;
             padding: 10px 0;
+            display: flex;
+            flex-direction: column; /* Cambia a dirección de columna en pantallas pequeñas */
+            align-items: center; /* Centra horizontalmente los elementos */
         }
-        #feature__title {
+        #feature_title {
             font-size: 25px;
             font-weight: 600;
             margin: 10px 0;
@@ -124,6 +128,7 @@
         .contenido {
             display: none;
             padding: 10px;
+            color: #FFF;
         }
 
         .acordeon.active .contenido {
@@ -140,7 +145,7 @@
         .acordeon-icon {
             font-size: 24px;
             transition: transform 0.3s ease-in-out;
-            color: #fd7d2c;
+            color: #FFF;
         }
 
         .acordeon.active .acordeon-icon {
@@ -150,18 +155,22 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-bottom: 60px;
+            margin-bottom: 0px;
+            width: 100%; /* Abarca todo el ancho en pantallas pequeñas */
+            margin: 0 auto; /* Centra horizontalmente los acordeones */
+            background-color: #fd7d2c;
         }
 
         .acordeon {
             max-width: 800px; /* Ajusta el ancho máximo según tus preferencias */
             width: 100%;
-            border: 1px solid #ddd;
+            border: 1px solid #FFF;
             margin: 10px;
             padding: 10px;
             cursor: pointer;
             border-radius: 5px;
-            background-color: #f9f9f9;
+            background-color: #fd7d2c;
+            margin-bottom: 60px;
         }
 
         .image-link img {
@@ -221,16 +230,17 @@
         .feature-form {
             margin: 0; /* Quita el margen izquierdo en pantallas más pequeñas */
         }
-
+        #feature_title {
+            font-size: 15px; /* Ajusta el tamaño en pantallas más pequeñas */
+        }
         #acordeones {
-            max-width: 90%; /* Reduce el ancho máximo en pantallas más pequeñas */
+            max-width: 100%; /* Reduce el ancho máximo en pantallas más pequeñas */
             margin: 0 auto; /* Centra horizontalmente los acordeones */
         }
          
         #logo {
         width: 50%; /* Mantén el mismo ancho en pantallas más pequeñas */
         height: 50%; /* Permite que la altura se ajuste automáticamente */
-        margin-left: 5px;
         }
         #banner h1 {
         font-size: 2rem;
@@ -243,6 +253,10 @@
         #banner p {
             font-size: 1.2rem;
         }
+        #copyright {
+            display: block; /* Cambiar a bloque para que los elementos se apilen */
+            margin-top: 10px; /* Espacio superior */
+        }
     }
     </style>
 </head>
@@ -252,7 +266,7 @@
     </header>
 
     <div id="banner">
-        <img src="img/1.png" alt="Main Image">
+        <img src="img/Landingpage.png" alt="Main Image">
        <!-- <div id="banner-overlay"></div> Aquí agregamos el div de superposición -->
         <div id="banner-content">
             <h1>¡Aquí inicia la aventura!</h1>
@@ -266,7 +280,7 @@
 
     <div id="features">
         <div id="features-div">
-            <h3 id="feature__title">¡Tenemos un regalo especial para ti!</h3>
+            <h3 id="feature_title">¡Tenemos un regalo especial para ti!</h3>
             <p>Suscríbete a nuestra lista y participa para ganar 2 boletas para ti y un acompañante, para disfrutar una noche de drama y comedia en Microteatro Santo Domingo.</p>
             <p>Solo tienes que dejarnos tus datos, seguir nuestra cuenta de Instagram @descubre.do, ¡y listo! Ya estás participando.</p>
         </div>
@@ -338,12 +352,11 @@
             });}(jQuery));var $mcj = jQuery.noConflict(true);</script></div>
         </div>
     </div>
-    <hr>
-    <br>
-    <div id="acordeones" style="background-color: white;">
-        <h2 style="text-align: center; font-size: 50px; margin-bottom: 20px; color: #FD7D2C;">Informaciones</h2>
+    <br style="background-color: #FD7D2C;">
+    <div id="acordeones" style="background-color: #fd7d2c;">
+        <h2 style="text-align: center; font-size: 50px; margin-bottom: 20px; color: #FFF;">Informaciones</h2>
         <div class="acordeon">
-            <h2 style="color: #FD7D2C;">Concurso 2023 <span class="acordeon-icon">+</span></h2>
+            <h2 style="color: #FFF;">Concurso 2023 <span class="acordeon-icon">+</span></h2>
             <div class="contenido">
                 <!-- Información del concurso -->
                 <p>Anunciaremos el ganador vía correo electrónico, el próximo martes 22 de agosto del 2023. ¡Así que quédate bien pendiente!</p>
@@ -351,16 +364,15 @@
             </div>
         </div>
         <div class="acordeon">
-            <h2 style="color: #FD7D2C;">Política de Privacidad <span class="acordeon-icon">+</span></h2>
+            <h2 style="color: #FFF;">Política de Privacidad <span class="acordeon-icon">+</span></h2>
             <div class="contenido">
                 <!-- Información de la política de privacidad -->
                 <p>La privacidad y seguridad de tus datos personales son de suma importancia para nosotros. Nos comprometemos a recopilar, almacenar y procesar tus datos de manera responsable y en conformidad con las leyes de protección de datos aplicables, con el objetivo de garantizar su confidencialidad e integridad.</p>
             </div>
         </div>
     </div>
-    <br>
     <div id="copyright">
-        <p>&copy; Descubre DO 2023 · Todos los derechos reservados.</p>
+        <p>&copy; Descubre DO 2023 · Todos los derechos reservados. &nbsp;&nbsp;&nbsp; <i class="far fa-envelope"></i> &nbsp;<span style="color: white;">hola@descubre.do</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fab fa-instagram"></i> &nbsp;<span style="color: white;">descubre.do</span></p>
     </div>
     <script>
         const acordeones = document.querySelectorAll('.acordeon');

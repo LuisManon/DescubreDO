@@ -98,11 +98,6 @@
         text-align: left; /* Centra el contenido del div */
         }
 
-        #features h3 {
-            flex: 1;
-            font-size: 50px;
-        }
-
         .feature-form {
             flex: 1;
             padding: 0 40px; /* Reducir el padding */
@@ -132,10 +127,12 @@
         }
 
         #feature_title {
-            font-size: 25px;
+            flex: 1;
+            font-size: 50px;
             font-weight: 600;
             margin: 10px 0;
             color: #00a4a3;
+
         }
 
         .contenido {
@@ -244,7 +241,7 @@
             margin: 0; /* Quita el margen izquierdo en pantallas más pequeñas */
         }
         #feature_title {
-            font-size: 15px; /* Ajusta el tamaño en pantallas más pequeñas */
+            font-size: 25px; /* Ajusta el tamaño en pantallas más pequeñas */
         }
         #acordeones {
             max-width: 100%; /* Reduce el ancho máximo en pantallas más pequeñas */
@@ -259,7 +256,7 @@
         #logo {
         width: 50%; /* Mantén el mismo ancho en pantallas más pequeñas */
         height: 50%; /* Permite que la altura se ajuste automáticamente */
-        margin-left: 5px;
+        margin-left: 2px;
         }
 
         #banner h1 {
@@ -275,7 +272,7 @@
         }
 
         #copyright {
-            flex-direction: column;
+            flex-direction: column-reverse;
         }
 
         /* Ajustar el margen superior para los elementos individuales */
@@ -421,8 +418,7 @@
         // Texto a mostrar en el Typed.js
         const wordTexts = [
             'la aventura',
-            'la emoción',
-            'el descubrir'
+            'la emoción'
         ];
 
         // Configuración de Typed.js

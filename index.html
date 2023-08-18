@@ -9,6 +9,7 @@
     <link rel="icon" href="img/IconoDescrubre.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Nexa:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <style>
         body {
             margin: 0;
@@ -260,7 +261,7 @@
         height: 50%; /* Permite que la altura se ajuste automáticamente */
         margin-left: 5px;
         }
-        
+
         #banner h1 {
         font-size: 2rem;
         }
@@ -293,7 +294,7 @@
         <img src="img/Landingpage.png" alt="Main Image">
        <!-- <div id="banner-overlay"></div> Aquí agregamos el div de superposición -->
         <div id="banner-content">
-            <h1>¡Aquí inicia la aventura!</h1>
+            <h1>¡Aquí inicia <span id="typed-word"></span>!</h1>
             <p>Descubre DO es tu boleto para explorar, disfrutar y crear recuerdos inolvidables en la República Dominicana. Miles de lugares, actividades y experiencias esperan por ti.</p>
             <h2><b>¿Listo para vivir una emocionante travesía?</b></h2>
             <div class="arrow-animation">
@@ -414,6 +415,29 @@
                 acordeon.classList.toggle('active');
             });
         });
+        // Elemento donde se mostrará el texto dinámico
+        const typedWord = document.getElementById('typed-word');
+
+        // Texto a mostrar en el Typed.js
+        const wordTexts = [
+            'la aventura',
+            'la emoción',
+            'el descubrir'
+        ];
+
+        // Configuración de Typed.js
+        const options = {
+            strings: wordTexts,
+            typeSpeed: 80, // Velocidad de tipeo en milisegundos
+            backSpeed: 50, // Velocidad de retroceso en milisegundos
+            startDelay: 1000, // Retraso antes de comenzar a tipear en milisegundos
+            backDelay: 1000, // Retraso antes de retroceder en milisegundos
+            loop: true, // Repetir la animación
+            showCursor: false // Ocultar el cursor de tipeo
+        };
+
+        // Inicializar Typed.js en el elemento
+        const typed = new Typed(typedWord, options);
     </script>
 </body>
 </html>

@@ -228,6 +228,11 @@
         border-color: #FD7D2C;
         }
 
+        .copyright-item a {
+        color: white;           /* Color blanco para el texto del enlace */
+        text-decoration: none;  /* Sin subrayado en el enlace */
+        }
+
      @media screen and (max-width: 768px) {
         #features {
             flex-direction: column; /* Cambia la dirección de flexión en pantallas más pequeñas */
@@ -292,7 +297,7 @@
        <!-- <div id="banner-overlay"></div> Aquí agregamos el div de superposición -->
         <div id="banner-content">
             <h1>¡AQUÍ INICIA LA <span id="typed-word"></span>!</h1>
-            <p>Descubre DO es tu boleto para explorar, disfrutar y crear recuerdos inolvidables en la República Dominicana. Miles de lugares, actividades y experiencias esperan por ti.</p>
+            <p>Descubre <b>DO</b> es tu boleto para explorar, disfrutar y crear recuerdos inolvidables en la República Dominicana. Miles de lugares, actividades y experiencias esperan por ti.</p>
             <h2><b>¿Listo para vivir una emocionante travesía?</b></h2>
             <div class="arrow-animation">
                 <div class="arrow"></div>
@@ -395,13 +400,13 @@
     </div>
     <div id="copyright">
         <div class="copyright-item">
-            <p>&copy; Descubre DO 2023 · Todos los derechos reservados.</p>
+            <p>&copy; 2023 &bull; ©Descubre DO &bull; Todos los derechos reservados</p>
         </div>
         <div class="copyright-item">
             <i class="far fa-envelope"></i> <span>hola@descubre.do</span>
         </div>
         <div class="copyright-item">
-            <i class="fab fa-instagram"></i> <span>descubre.do</span>
+            <i class="fab fa-instagram"></i> <a href="https://www.instagram.com/descubre.do/">descubre.do</a>
         </div>
     </div>
     <script>

@@ -115,9 +115,21 @@
             color: white;
             padding: 10px 0;
             display: flex;
-            flex-direction: column; /* Cambia a dirección de columna en pantallas pequeñas */
-            align-items: center; /* Centra horizontalmente los elementos */
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap; /* Permite que los elementos se ajusten en varias filas */
         }
+
+        #copyright .copyright-item {
+            margin: 5px; /* Espacio entre elementos */
+            display: flex;
+            align-items: center;
+        }
+
+        #copyright .copyright-item i {
+            margin-right: 5px; /* Espacio entre el icono y el texto */
+        }
+
         #feature_title {
             font-size: 25px;
             font-weight: 600;
@@ -237,11 +249,18 @@
             max-width: 100%; /* Reduce el ancho máximo en pantallas más pequeñas */
             margin: 0 auto; /* Centra horizontalmente los acordeones */
         }
+
+        .acordeon {
+            width: 80%;
+            margin-bottom: 60px;
+        }
          
         #logo {
         width: 50%; /* Mantén el mismo ancho en pantallas más pequeñas */
         height: 50%; /* Permite que la altura se ajuste automáticamente */
+        margin-left: 5px;
         }
+        
         #banner h1 {
         font-size: 2rem;
         }
@@ -253,9 +272,14 @@
         #banner p {
             font-size: 1.2rem;
         }
+
         #copyright {
-            display: block; /* Cambiar a bloque para que los elementos se apilen */
-            margin-top: 10px; /* Espacio superior */
+            flex-direction: column;
+        }
+
+        /* Ajustar el margen superior para los elementos individuales */
+        #copyright .copyright-item {
+            margin-top: 5px;
         }
     }
     </style>
@@ -372,7 +396,15 @@
         </div>
     </div>
     <div id="copyright">
-        <p>&copy; Descubre DO 2023 · Todos los derechos reservados. &nbsp;&nbsp;&nbsp; <i class="far fa-envelope"></i> &nbsp;<span style="color: white;">hola@descubre.do</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fab fa-instagram"></i> &nbsp;<span style="color: white;">descubre.do</span></p>
+        <div class="copyright-item">
+            <p>&copy; Descubre DO 2023 · Todos los derechos reservados.</p>
+        </div>
+        <div class="copyright-item">
+            <i class="far fa-envelope"></i> <span>hola@descubre.do</span>
+        </div>
+        <div class="copyright-item">
+            <i class="fab fa-instagram"></i> <span>descubre.do</span>
+        </div>
     </div>
     <script>
         const acordeones = document.querySelectorAll('.acordeon');

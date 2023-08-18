@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css" />
     <title>DescubreDo</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="icon" href="img/IconoDescrubre.png" type="image/png">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nexa:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <style>
         body {
             margin: 0;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Nexa', sans-serif;
         }
 
         header {
@@ -34,7 +36,7 @@
 
         #banner img {
             width: 100%;
-            height: 100vh; /* Reduzco la altura en un 30% */
+            height: 85vh; /* Reduzco la altura en un 30% */
         }
 
         #banner-overlay {
@@ -52,31 +54,37 @@
         }
 
         #banner-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-        }
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
 
-        #banner h1 {
-            margin: 10px 0;
-            color: White;
-            font-weight: 600; 
-            font-size: 3rem;
-        }
+#banner h1 {
+    margin: 10px 0;
+    color: White;
+    font-weight: 600;
+    font-size: 3rem;
+}
 
-        #banner p {
-            font-weight: 400;
-            font-size: 1.3rem;
-            color: White;
-        }
+#banner h2 {
+    margin: 10px 0;
+    color: White;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+#banner p {
+    font-weight: 400;
+    font-size: 1.3rem;
+    color: White;
+}
 
         #features {
         background-color: white;
         color: black;
         display: flex;
-        justify-content: space-between; /* Centra horizontalmente */
+        justify-content: center; /* Centra horizontalmente */
         align-items: center; /* Centra verticalmente */
         gap: 20px;
         margin-bottom: 40px;
@@ -94,19 +102,9 @@
 
         .feature-form {
             flex: 1;
-            padding: 0 20px;
+            padding: 0 40px; /* Reducir el padding */
             background-color: white;
-        }
-
-        footer {
-            background-color: #00a4a3;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-
-        #social-icons {
-            margin-top: 20px;
+            margin-left: -20px; /* Ajustar el margen izquierdo */
         }
 
         #copyright {
@@ -119,6 +117,7 @@
             font-size: 25px;
             font-weight: 600;
             margin: 10px 0;
+            color: #00a4a3;
         }
 
         .contenido {
@@ -165,9 +164,83 @@
         }
 
         .image-link img {
-    width: 30px;
-    height: 30px;
-}
+            width: 30px;
+            height: 30px;
+        }
+
+        .arrow-animation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            animation: bounce 1s infinite;
+        }
+
+        .arrow {
+            width: 30px;
+            height: 30px;
+            border-left: 4px solid #fff;
+            border-bottom: 4px solid #fff;
+            transform: rotate(-45deg);
+            animation: arrowMove 1s infinite alternate;
+        }
+
+        @keyframes arrowMove {
+            from {
+                transform: rotate(-45deg) translateY(0);
+            }
+            to {
+                transform: rotate(-45deg) translateY(10px);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        hr {
+        height: 2px;
+        background-color: #FD7D2C;
+        border-color: #FD7D2C;
+        }
+
+     @media screen and (max-width: 768px) {
+        #features {
+            flex-direction: column; /* Cambia la dirección de flexión en pantallas más pequeñas */
+        }
+
+        #features-div {
+            padding: 0 2rem; /* Ajusta el padding en pantallas más pequeñas */
+        }
+
+        .feature-form {
+            margin: 0; /* Quita el margen izquierdo en pantallas más pequeñas */
+        }
+
+        #acordeones {
+            max-width: 90%; /* Reduce el ancho máximo en pantallas más pequeñas */
+            margin: 0 auto; /* Centra horizontalmente los acordeones */
+        }
+        #logo {
+        width: 50%; /* Mantén el mismo ancho en pantallas más pequeñas */
+        height: 50%; /* Permite que la altura se ajuste automáticamente */
+        }
+        #banner h1 {
+        font-size: 2rem;
+    }
+
+    #banner h2 {
+        font-size: 1.2rem;
+    }
+
+    #banner p {
+        font-size: 1rem;
+    }
+    }
     </style>
 </head>
 <body>
@@ -176,11 +249,15 @@
     </header>
 
     <div id="banner">
-        <img src="img/BannerDescubreDO.png" alt="Main Image">
-        <div id="banner-overlay"></div> <!-- Aquí agregamos el div de superposición -->
+        <img src="img/1.png" alt="Main Image">
+       <!-- <div id="banner-overlay"></div> Aquí agregamos el div de superposición -->
         <div id="banner-content">
             <h1>¡Aquí inicia la aventura!</h1>
-            <p>Descubre DO es tu boleto para explorar, disfrutar y crear recuerdos inolvidables en la República Dominicana. Miles de lugares, actividades y experiencias esperan por ti. ¿Listo para vivir una emocionante travesía?</p>
+            <p>Descubre DO es tu boleto para explorar, disfrutar y crear recuerdos inolvidables en la República Dominicana. Miles de lugares, actividades y experiencias esperan por ti.</p>
+            <h2><b>¿Listo para vivir una emocionante travesía?</b></h2>
+            <div class="arrow-animation">
+                <div class="arrow"></div>
+            </div>            
         </div>
     </div>
 
@@ -192,44 +269,46 @@
         </div>
             <!-- Aquí puedes agregar los campos del formulario -->
             <!-- Mailchimp -->
-        <div id="mc_embed_shell">
-            <div id="mc_embed_signup">
-                <form action="https://gmail.us9.list-manage.com/subscribe/post?u=32fde870efc72f05d1da03c9c&amp;id=5c1633c6fb&amp;f_id=003414e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-                    <div id="mc_embed_signup_scroll"><h2></h2>
-                        <div class="indicates-required"><span class="asterisk">*</span> indica requerido</div>
-                        <div class="mc-field-group">
-                          <label for="mce-EMAIL">Correo Electronico <span class="asterisk">*</span></label>
-                          <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""></div>
-                          <div class="mc-field-group"><label for="mce-FNAME">Nombre <span class="asterisk">*</span></label>
-                            <input type="text" name="FNAME" class="required text" id="mce-FNAME" required="" value=""></div>
-                            <div class="mc-field-group"><label for="mce-LNAME">Apellido <span class="asterisk">*</span></label>
-                              <input type="text" name="LNAME" class="required text" id="mce-LNAME" required="" value=""></div>
-                              <div class="mc-field-group input-group"><strong>Temas de preferencia </strong>
-                                <ul>
-                                  <li><input type="checkbox" name="group[52883][1]" id="mce-group[52883]-52883-0" value=""><label for="mce-group[52883]-52883-0"> Vida Nocturna</label></li>
-                                  <li><input type="checkbox" name="group[52883][2]" id="mce-group[52883]-52883-1" value=""><label for="mce-group[52883]-52883-1"> Cultura</label></li>
-                                  <li><input type="checkbox" name="group[52883][4]" id="mce-group[52883]-52883-2" value=""><label for="mce-group[52883]-52883-2"> Turismo</label></li>
-                                  <li><input type="checkbox" name="group[52883][8]" id="mce-group[52883]-52883-3" value=""><label for="mce-group[52883]-52883-3"> Gastronomía</label></li>
-                                </ul>
-                                <span id="mce-group[52883]-HELPERTEXT" class="helper_text">Puedes escoger más de uno</span>
-                              </div>
-            <div hidden=""><input type="hidden" name="tags" value="12733363,12732055"></div>
-                    <div id="mce-responses" class="clear foot">
-                        <div class="response" id="mce-error-response" style="display: none;"></div>
-                        <div class="response" id="mce-success-response" style="display: none;"></div>
+        <div id="feature-form">
+            <div id="mc_embed_shell">
+                <div id="mc_embed_signup">
+                    <form action="https://gmail.us9.list-manage.com/subscribe/post?u=32fde870efc72f05d1da03c9c&amp;id=5c1633c6fb&amp;f_id=003414e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                        <div id="mc_embed_signup_scroll"><h2></h2>
+                            <div class="indicates-required"><span class="asterisk">*</span> indica requerido</div>
+                            <div class="mc-field-group">
+                            <label for="mce-EMAIL">Correo Electronico <span class="asterisk">*</span></label>
+                            <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""></div>
+                            <div class="mc-field-group"><label for="mce-FNAME">Nombre <span class="asterisk">*</span></label>
+                                <input type="text" name="FNAME" class="required text" id="mce-FNAME" required="" value=""></div>
+                                <div class="mc-field-group"><label for="mce-LNAME">Apellido <span class="asterisk">*</span></label>
+                                <input type="text" name="LNAME" class="required text" id="mce-LNAME" required="" value=""></div>
+                                <div class="mc-field-group input-group"><strong>Temas de preferencia </strong>
+                                    <ul>
+                                    <li><input type="checkbox" name="group[52883][1]" id="mce-group[52883]-52883-0" value=""><label for="mce-group[52883]-52883-0"> Vida Nocturna</label></li>
+                                    <li><input type="checkbox" name="group[52883][2]" id="mce-group[52883]-52883-1" value=""><label for="mce-group[52883]-52883-1"> Cultura</label></li>
+                                    <li><input type="checkbox" name="group[52883][4]" id="mce-group[52883]-52883-2" value=""><label for="mce-group[52883]-52883-2"> Turismo</label></li>
+                                    <li><input type="checkbox" name="group[52883][8]" id="mce-group[52883]-52883-3" value=""><label for="mce-group[52883]-52883-3"> Gastronomía</label></li>
+                                    </ul>
+                                    <span id="mce-group[52883]-HELPERTEXT" class="helper_text">Puedes escoger más de uno</span>
+                                </div>
+                <div hidden=""><input type="hidden" name="tags" value="12733363,12732055"></div>
+                        <div id="mce-responses" class="clear foot">
+                            <div class="response" id="mce-error-response" style="display: none;"></div>
+                            <div class="response" id="mce-success-response" style="display: none;"></div>
+                        </div>
+                    <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                        /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
+                        <input type="text" name="b_32fde870efc72f05d1da03c9c_5c1633c6fb" tabindex="-1" value="">
                     </div>
-                <div aria-hidden="true" style="position: absolute; left: -5000px;">
-                    /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
-                    <input type="text" name="b_32fde870efc72f05d1da03c9c_5c1633c6fb" tabindex="-1" value="">
-                </div>
-                    <div class="optionalParent">
-                        <div class="clear foot">
-                            <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribirse">
-                            <p style="margin: 0px auto;"><a href="http://eepurl.com/iwdQP6" title="Mailchimp - el marketing por correo electrónico hecho fácil y divertido"><span style="display: inline-block; background-color: transparent; border-radius: 4px;"><img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center; color: #fd7d2c;"></span></a></p>
+                        <div class="optionalParent">
+                            <div class="clear foot">
+                                <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribirse">
+                                <p style="margin: 0px auto;"><a href="http://eepurl.com/iwdQP6" title="Mailchimp - el marketing por correo electrónico hecho fácil y divertido"><span style="display: inline-block; background-color: transparent; border-radius: 4px;"><img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center; color: #fd7d2c;"></span></a></p>
+                            </div>
                         </div>
                     </div>
+                </form>
                 </div>
-            </form>
             </div>
             <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';fnames[9]='MMERGE9';ftypes[9]='dropdown';/*
              * Translated default messages for the $ validation plugin.
@@ -254,38 +333,29 @@
               max: $.validator.format("Por favor, escribe un valor menor o igual a {0}."),
               min: $.validator.format("Por favor, escribe un valor mayor o igual a {0}.")
             });}(jQuery));var $mcj = jQuery.noConflict(true);</script></div>
-          </div>
+        </div>
     </div>
-
+    <hr>
+    <br>
     <div id="acordeones" style="background-color: white;">
-        <h2 style="text-align: center; font-size: 50px; margin-bottom: 20px;">Informaciones</h2>
+        <h2 style="text-align: center; font-size: 50px; margin-bottom: 20px; color: #FD7D2C;">Informaciones</h2>
         <div class="acordeon">
-            <h2>Concurso 2023 <span class="acordeon-icon">+</span></h2>
+            <h2 style="color: #FD7D2C;">Concurso 2023 <span class="acordeon-icon">+</span></h2>
             <div class="contenido">
                 <!-- Información del concurso -->
                 <p>Anunciaremos el ganador vía correo electrónico, el próximo martes 22 de agosto del 2023. ¡Así que quédate bien pendiente!</p>
-
                 <p>Este concurso es concebido y gestionado de manera exclusiva por el equipo de Descubre DO, por lo tanto, Microteatro no asume responsabilidad alguna respecto a la mecánica, elección de los ganadores ni coordinación logística de la entrega de las boletas.</p>
             </div>
         </div>
         <div class="acordeon">
-            <h2>Política de Privacidad <span class="acordeon-icon">+</span></h2>
+            <h2 style="color: #FD7D2C;">Política de Privacidad <span class="acordeon-icon">+</span></h2>
             <div class="contenido">
                 <!-- Información de la política de privacidad -->
                 <p>La privacidad y seguridad de tus datos personales son de suma importancia para nosotros. Nos comprometemos a recopilar, almacenar y procesar tus datos de manera responsable y en conformidad con las leyes de protección de datos aplicables, con el objetivo de garantizar su confidencialidad e integridad.</p>
             </div>
         </div>
     </div>
-
-    <footer>
-        <p>¡Síguenos y entérate de todo!</p>
-        <div id="social-icons">
-            <a href="https://www.instagram.com/descubre.do/" class="image-link">
-                <img src="img/Instagram.png" alt="Instagram">
-            </a>
-        </div>
-    </footer>
-
+    <br>
     <div id="copyright">
         <p>Copyrights &copy; 2023 All Rights Reserved by DescubreDo.</p>
     </div>

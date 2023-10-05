@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/styles.css" />
     <title>DescubreDo</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="icon" href="img/IconoDescrubre.png" type="image/png">
+    <link rel="icon" href="img/IconoDescrubreNaranja.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Nexa:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
@@ -43,79 +43,34 @@
             margin-left: 20px;
         }
 
-        #banner {
-            position: relative;
-            text-align: center;
-        }
-
-        #banner img {
-            width: 100%;
-            height: 85vh; /* Reduzco la altura en un 30% */
-            max-height: 85vh; /* Limita la altura máxima de la imagen */
-            object-fit: cover;
-        }
-
-        #banner-overlay {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100vh;
-            background: rgba(0, 0, 0, 0.2);
-            background-image: linear-gradient(
-                to top,
-                rgba(0, 0, 0, 0.8) 0,
-                rgba(0, 0, 0, 0) 60%,
-                rgba(0, 0, 0, 0.8) 100%
-            );
-        }
-
-        #banner-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-        }
-
-        #banner h1 {
-            margin: 10px 0;
-            color: White;
-            font-weight: 600;
-            font-size: 3rem;
-        }
-
-        #banner h2 {
-            margin: 10px 0;
-            color: White;
-            font-weight: 400;
-            font-size: 1.5rem;
-        }
-        #banner p {
-            font-weight: 400;
-            font-size: 1.3rem;
-            color: White;
-        }
-
         #features {
-        background-color: white;
-        color: black;
-        display: flex;
-        justify-content: center; /* Centra horizontalmente */
-        align-items: center; /* Centra verticalmente */
-        gap: 20px;
-        margin-bottom: 40px;
+            background-color: white;
+            color: black;
+            display: flex;
+            flex-direction: row; /* Cambia la dirección de flex a fila */
+            justify-content: center;
+            align-items: center;
+            background-image: url('img/Banner.png');
+            background-size: auto;
+            background-position: center center;
+            background-repeat: no-repeat;
+            height: 800px;
+            margin-bottom: 0;
         }
 
         #features-div {
-        padding: 0 6rem;
-        text-align: left; /* Centra el contenido del div */
+            flex: 1; /* Ambos divs ocuparán el 50% del espacio disponible */
+            max-width: 40%; /* Cambia el ancho máximo a un valor menor, como el 40% */
+            padding: 0 20px; /* Ajusta el espacio interno si es necesario */
+            text-align: left;
+            margin-left: 100px; /* Agrega margen izquierdo para separar de la izquierda */
+            margin-right: 100px; /* Agrega un espacio (gap) a la derecha */
         }
-
-        .feature-form {
-            flex: 1;
-            padding: 0 40px; /* Reducir el padding */
-            background-color: white;
-            margin-left: -20px; /* Ajustar el margen izquierdo */
+        #features-form {
+            flex: 1; /* Ambos divs ocuparán el 50% del espacio disponible */
+            max-width: 60%; /* Cambia el ancho máximo a un valor mayor, como el 60% */
+            padding: 0 20px; /* Ajusta el espacio interno si es necesario */
+            text-align: left;
         }
 
         #copyright {
@@ -145,7 +100,6 @@
             font-weight: 600;
             margin: 10px 0;
             color: #00a4a3;
-
         }
 
         .contenido {
@@ -154,46 +108,57 @@
             color: #FFF;
         }
 
-        .acordeon.active .contenido {
-            display: block;
-        }
+        #tarjetas-wrapper {
+    background-color: #fd7d2c;
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    padding: 40px 0; /* Ajusta el espaciado interno según sea necesario */
+}
 
-        .acordeon h2 {
-            margin: 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+#tarjetas-container {
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
 
-        .acordeon-icon {
-            font-size: 24px;
-            transition: transform 0.3s ease-in-out;
-            color: #FFF;
-        }
-
-        .acordeon.active .acordeon-icon {
-            transform: rotate(45deg);
-        }
-        #acordeones {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 0px;
-            width: 100%; /* Abarca todo el ancho en pantallas pequeñas */
-            margin: 0 auto; /* Centra horizontalmente los acordeones */
-            background-color: #fd7d2c;
-        }
-
-        .acordeon {
-            max-width: 800px; /* Ajusta el ancho máximo según tus preferencias */
-            width: 100%;
-            border: 1px solid #FFF;
-            margin: 10px;
-            padding: 10px;
-            cursor: pointer;
+        /* Ajusta el ancho de cada tarjeta para que ocupe el 20% del contenedor */
+        .tarjeta {
+            flex: 1;
+            width: calc(20% - 20px); /* El -20px es para dejar espacio entre las tarjetas */
+            max-width: 200px; /* Ancho máximo de cada tarjeta */
+            padding: 20px;
+            background-color: white;
             border-radius: 5px;
-            background-color: #fd7d2c;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            color: black;
             margin-bottom: 40px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        /* Estilo para el título de las tarjetas */
+        .tarjeta h2 {
+            font-size: 24px;
+            color: #fd7d2c;
+            margin-top: 10px;
+        }
+
+        .tarjeta p {
+            text-align: center; /* Alinea el párrafo a la izquierda */
+        }
+
+        .tarjeta i {
+            font-size: 36px; /* Tamaño del ícono */
+            margin-bottom: 10px; /* Espacio entre el ícono y el título */
+        }    
+
+        .tarjeta-icon {
+            width: 50px; /* Tamaño deseado para los iconos */
+            height: 50px;
+            margin-bottom: 10px; /* Espacio entre el icono y el título */
         }
 
         .image-link img {
@@ -201,49 +166,14 @@
             height: 30px;
         }
 
-        .arrow-animation {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 20px;
-            animation: bounce 1s infinite;
-        }
-
-        .arrow {
-            width: 30px;
-            height: 30px;
-            border-left: 4px solid #fff;
-            border-bottom: 4px solid #fff;
-            transform: rotate(-45deg);
-            animation: arrowMove 1s infinite alternate;
-        }
-
-        @keyframes arrowMove {
-            from {
-                transform: rotate(-45deg) translateY(0);
-            }
-            to {
-                transform: rotate(-45deg) translateY(10px);
-            }
-        }
-
-        @keyframes bounce {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-        hr {
-        height: 2px;
-        background-color: #FD7D2C;
-        border-color: #FD7D2C;
-        }
-
         .copyright-item a {
         color: white;           /* Color blanco para el texto del enlace */
         text-decoration: none;  /* Sin subrayado en el enlace */
+        }
+
+        #mc_embed_signup {
+            max-width: 80%; /* Ajusta el ancho del formulario al 100% de la tarjeta */
+            width: 100%; /* Ajusta el ancho del formulario al 100% de la tarjeta */
         }
 
      @media screen and (max-width: 768px) {
@@ -272,45 +202,47 @@
         }
 
         #features {
-            flex-direction: column; /* Cambia la dirección de flexión en pantallas más pequeñas */
+            background-color: white;
+            color: black;
+            display: flex;
+            justify-content: center; /* Centra horizontalmente */
+            align-items: center; /* Centra verticalmente */
+            gap: 20px;
+            margin-bottom: 40px;
+            /* Establece la imagen como fondo del div */
+            background-size: cover; /* Ajusta el tamaño para cubrir todo el div */
+            background-position: center center; /* Centra la imagen horizontal y verticalmente */
         }
 
         #features-div {
-            padding: 0 2rem; /* Ajusta el padding en pantallas más pequeñas */
+            padding: 0 6rem;
+            text-align: left; /* Centra el contenido del div */
         }
 
         .feature-form {
-            margin: 0; /* Quita el margen izquierdo en pantallas más pequeñas */
+            flex: 1;
+            padding: 0 40px; /* Reducir el padding */
+            background-color: white;
+            margin-left: -20px; /* Ajustar el margen izquierdo */
         }
+
         #feature_title {
             font-size: 35px; /* Ajusta el tamaño en pantallas más pequeñas */
         }
-        #acordeones {
-            max-width: 100%; /* Reduce el ancho máximo en pantallas más pequeñas */
-            margin: 0 auto; /* Centra horizontalmente los acordeones */
+
+        #tarjetas-container {
+            flex-direction: column; /* Apila las filas verticalmente en pantallas pequeñas */
         }
 
-        .acordeon {
-            width: 80%;
-            margin-bottom: 60px;
+        .tarjeta {
+            flex: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+            width: 88%; /* Ancho completo en pantallas pequeñas */
         }
-         
+
         #logo {
         width: 50%; /* Mantén el mismo ancho en pantallas más pequeñas */
         height: 50%; /* Permite que la altura se ajuste automáticamente */
         margin-left: 2px;
-        }
-
-        #banner h1 {
-        font-size: 2rem;
-        }
-
-        #banner h2 {
-            font-size: 1.2rem;
-        }
-
-        #banner p {
-            font-size: 1.2rem;
         }
 
         #copyright {
@@ -336,137 +268,110 @@
                 </a>
             </div>
     </header>
-
-    <div id="banner">
-        <img src="img/Landingpage.png" alt="Main Image">
-       <!-- <div id="banner-overlay"></div> Aquí agregamos el div de superposición -->
-        <div id="banner-content">
-            <h1>¡AQUÍ INICIA LA <span id="typed-word"></span>!</h1>
-            <p><b>Descubre DO</b> es tu boleto para explorar, disfrutar y crear recuerdos inolvidables en la República Dominicana. Miles de lugares, actividades y experiencias esperan por ti.</p>
-            <h2><b>¿Listo para vivir una emocionante travesía?</b></h2>
-            <div class="arrow-animation">
-                <div class="arrow"></div>
-            </div>            
-        </div>
-    </div>
-
+<body>
     <div id="features">
         <div id="features-div">
-            <h3 id="feature_title">¿QUIERES SABER MÁS?</h3>
-            <p>Suscribete y obtendras actualizaciones de actividades semanales, Suscribirse es fácil. Simplemente ingresa tu dirección de correo electrónico en el formulario de suscripción.</p>
-            <p>¡Y eso es todo! A partir de ahora, recibirás nuestras actualizaciones semanales directamente en tu bandeja de entrada. <a href="politica.html" target="_blank" style="color: #00a4a3;"> Política de Privacidad</a></p>
+            <h3 id="feature_title">¡TODO DESDE UN MISMO LUGAR!</h3>
+            <p>Somos la guía digital más completa en República Dominicana para conocer emocionantes y auténticas experiencias en nuestro hermoso país.</p>
+            <p>Comunicamos de manera dinámica las últimas noticias sobre eventos y actividades para disfrutar en todo el país, con opciones gratuitas y especiales, para todos los gustos.</p>
         </div>
             <!-- Aquí puedes agregar los campos del formulario -->
             <!-- Mailchimp -->
-        <div id="feature-form">
+        <div id="features-form">
             <div id="mc_embed_shell">
                 <div id="mc_embed_signup">
-                    <form action="https://gmail.us9.list-manage.com/subscribe/post?u=32fde870efc72f05d1da03c9c&amp;id=5c1633c6fb&amp;f_id=003414e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-                        <div id="mc_embed_signup_scroll"><h2></h2>
+                    <form action="https://descubre.us9.list-manage.com/subscribe/post?u=32fde870efc72f05d1da03c9c&amp;id=5c1633c6fb&amp;f_id=003414e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                        <div id="mc_embed_signup_scroll">
                             <div class="indicates-required"><span class="asterisk">*</span> indica requerido</div>
                             <div class="mc-field-group">
-                            <label for="mce-EMAIL">Correo Electronico <span class="asterisk">*</span></label>
-                            <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""></div>
-                            <div class="mc-field-group"><label for="mce-FNAME">Nombre <span class="asterisk">*</span></label>
-                                <input type="text" name="FNAME" class="required text" id="mce-FNAME" required="" value=""></div>
-                                <div class="mc-field-group"><label for="mce-LNAME">Apellido <span class="asterisk">*</span></label>
-                                <input type="text" name="LNAME" class="required text" id="mce-LNAME" required="" value=""></div>
-                                <div class="mc-field-group input-group"><strong>Temas de preferencia </strong>
-                                    <ul>
-                                    <li><input type="checkbox" name="group[52883][1]" id="mce-group[52883]-52883-0" value=""><label for="mce-group[52883]-52883-0"> Vida Nocturna</label></li>
-                                    <li><input type="checkbox" name="group[52883][2]" id="mce-group[52883]-52883-1" value=""><label for="mce-group[52883]-52883-1"> Cultura</label></li>
-                                    <li><input type="checkbox" name="group[52883][4]" id="mce-group[52883]-52883-2" value=""><label for="mce-group[52883]-52883-2"> Turismo</label></li>
-                                    <li><input type="checkbox" name="group[52883][8]" id="mce-group[52883]-52883-3" value=""><label for="mce-group[52883]-52883-3"> Gastronomía</label></li>
-                                    </ul>
-                                    <span id="mce-group[52883]-HELPERTEXT" class="helper_text">Puedes escoger más de uno</span>
-                                </div>
-                <div hidden=""><input type="hidden" name="tags" value="12733363,12732055"></div>
-                        <div id="mce-responses" class="clear foot">
-                            <div class="response" id="mce-error-response" style="display: none;"></div>
-                            <div class="response" id="mce-success-response" style="display: none;"></div>
-                        </div>
-                    <div aria-hidden="true" style="position: absolute; left: -5000px;">
-                        /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
-                        <input type="text" name="b_32fde870efc72f05d1da03c9c_5c1633c6fb" tabindex="-1" value="">
-                    </div>
-                        <div class="optionalParent">
-                            <div class="clear foot">
-                                <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribirse">
-                                <p style="margin: 0px auto;"><a href="http://eepurl.com/iwdQP6" title="Mailchimp - el marketing por correo electrónico hecho fácil y divertido"><span style="display: inline-block; background-color: transparent; border-radius: 4px;"><img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center; color: #fd7d2c;"></span></a></p>
+                                <label for="mce-FNAME">Nombre <span class="asterisk">*</span></label>
+                                <input type="text" name="FNAME" class="required text" id="mce-FNAME" required="" value="">
                             </div>
+                            <div class="mc-field-group">
+                                <label for="mce-LNAME">Apellido <span class="asterisk">*</span></label>
+                                <input type="text" name="LNAME" class="required text" id="mce-LNAME" required="" value="">
+                            </div>
+                            <div class="mc-field-group">
+                                <label for="mce-EMAIL">Correo Electronico <span class="asterisk">*</span></label>
+                                <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value="">
+                            </div>
+                            <div class="mc-field-group input-group">
+                                <strong>Temas de preferencia </strong>
+                                <ul>
+                                    <li><input type="checkbox" name="group[52883][1]" id="mce-group[52883]-52883-0" value=""><label for="mce-group[52883]-52883-0">Vida Nocturna</label></li>
+                                    <li><input type="checkbox" name="group[52883][2]" id="mce-group[52883]-52883-1" value=""><label for="mce-group[52883]-52883-1">Cultura</label></li>
+                                    <li><input type="checkbox" name="group[52883][4]" id="mce-group[52883]-52883-2" value=""><label for="mce-group[52883]-52883-2">Turismo</label></li>
+                                    <li><input type="checkbox" name="group[52883][8]" id="mce-group[52883]-52883-3" value=""><label for="mce-group[52883]-52883-3">Gastronomía</label></li>
+                                    <li><input type="checkbox" name="group[52883][16]" id="mce-group[52883]-52883-4" value=""><label for="mce-group[52883]-52883-4">Eventos</label></li>
+                                </ul>
+                                <span id="mce-group[52883]-HELPERTEXT" class="helper_text">Puedes escoger más de uno</span>
+                            </div>
+                            <div class="mc-field-group size1of2">
+                                <label for="mce-BIRTHDAY-month">Fecha de cumpleaños </label>
+                                <div class="datefield"><span class="subfield dayfield">
+                                    <input class="birthday REQ_CSS" type="text" pattern="[0-9]*" placeholder="DD" size="2" maxlength="2" name="BIRTHDAY[day]" id="mce-BIRTHDAY-day" value=""></span> /<span class="subfield monthfield"><input class="birthday REQ_CSS" type="text" pattern="[0-9]*" placeholder="MM" size="2" maxlength="2" name="BIRTHDAY[month]" id="mce-BIRTHDAY-month" value=""></span><span class="small-meta nowrap">( dd / mm )</span>
+                                </div>
+                            </div>
+                            <div hidden=""><input type="hidden" name="tags" value="12732055"></div>
+                            <div id="mce-responses" class="clear">
+                                <div class="response" id="mce-error-response" style="display: none;"></div>
+                                <div class="response" id="mce-success-response" style="display: none;"></div>
+                            </div><div aria-hidden="true" style="position: absolute; left: -5000px;"><input type="text" name="b_32fde870efc72f05d1da03c9c_5c1633c6fb" tabindex="-1" value=""></div><div class="clear"><input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe"></div>
                         </div>
-                    </div>
-                </form>
+                    </form>
                 </div>
             </div>
-            <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';fnames[9]='MMERGE9';ftypes[9]='dropdown';/*
-             * Translated default messages for the $ validation plugin.
-             * Locale: ES
-             */
-            $.extend($.validator.messages, {
-              required: "Este campo es obligatorio.",
-              remote: "Por favor, rellena este campo.",
-              email: "Por favor, escribe una dirección de correo válida",
-              url: "Por favor, escribe una URL válida.",
-              date: "Por favor, escribe una fecha válida.",
-              dateISO: "Por favor, escribe una fecha (ISO) válida.",
-              number: "Por favor, escribe un número entero válido.",
-              digits: "Por favor, escribe sólo dígitos.",
-              creditcard: "Por favor, escribe un número de tarjeta válido.",
-              equalTo: "Por favor, escribe el mismo valor de nuevo.",
-              accept: "Por favor, escribe un valor con una extensión aceptada.",
-              maxlength: $.validator.format("Por favor, no escribas más de {0} caracteres."),
-              minlength: $.validator.format("Por favor, no escribas menos de {0} caracteres."),
-              rangelength: $.validator.format("Por favor, escribe un valor entre {0} y {1} caracteres."),
-              range: $.validator.format("Por favor, escribe un valor entre {0} y {1}."),
-              max: $.validator.format("Por favor, escribe un valor menor o igual a {0}."),
-              min: $.validator.format("Por favor, escribe un valor mayor o igual a {0}.")
-            });}(jQuery));var $mcj = jQuery.noConflict(true);</script></div>
+            <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[0]='EMAIL';ftypes[0]='email';fnames[5]='BIRTHDAY';ftypes[5]='birthday';/*
+                * Translated default messages for the $ validation plugin.
+                * Locale: ES
+                */
+               $.extend($.validator.messages, {
+                 required: "Este campo es obligatorio.",
+                 remote: "Por favor, rellena este campo.",
+                 email: "Por favor, escribe una dirección de correo válida",
+                 url: "Por favor, escribe una URL válida.",
+                 date: "Por favor, escribe una fecha válida.",
+                 dateISO: "Por favor, escribe una fecha (ISO) válida.",
+                 number: "Por favor, escribe un número entero válido.",
+                 digits: "Por favor, escribe sólo dígitos.",
+                 creditcard: "Por favor, escribe un número de tarjeta válido.",
+                 equalTo: "Por favor, escribe el mismo valor de nuevo.",
+                 accept: "Por favor, escribe un valor con una extensión aceptada.",
+                 maxlength: $.validator.format("Por favor, no escribas más de {0} caracteres."),
+                 minlength: $.validator.format("Por favor, no escribas menos de {0} caracteres."),
+                 rangelength: $.validator.format("Por favor, escribe un valor entre {0} y {1} caracteres."),
+                 range: $.validator.format("Por favor, escribe un valor entre {0} y {1}."),
+                 max: $.validator.format("Por favor, escribe un valor menor o igual a {0}."),
+                 min: $.validator.format("Por favor, escribe un valor mayor o igual a {0}.")
+               });}(jQuery));var $mcj = jQuery.noConflict(true);</script></div>
         </div>
     </div>
-    <br style="background-color: #FD7D2C;">
-    <div id="acordeones" style="background-color: #fd7d2c;">
-        <h2 style="text-align: center; font-size: 50px; margin-bottom: 20px; color: #FFF;">DESCÚBRELO TODO</h2>
-        <div class="acordeon">
-            <h2 style="color: #FFF;">Eventos <span class="acordeon-icon">+</span></h2>
-            <div class="contenido">
-                <!-- Información del concurso -->
+    <div id="tarjetas-wrapper" style="background-color: #fd7d2c;">
+        <div id="tarjetas-container">
+            <div class="tarjeta tarjeta-overlay">
+                <img src="img/Eventos.svg" alt="Eventos Icon" class="tarjeta-icon">
+                <h2>Eventos</h2>
                 <p>Conciertos, talleres, conferencias, festivales. Todo lo que viene próximamente y que no te puedes perder.</p>
             </div>
-        </div>
-        <div class="acordeon">
-            <h2 style="color: #FFF;">Gastronomía <span class="acordeon-icon">+</span></h2>
-            <div class="contenido">
-                <!-- Información del concurso -->
+            <div class="tarjeta tarjeta-overlay">
+                <img src="img/Gastronomía.svg" alt="Eventos Icon" class="tarjeta-icon">
+                <h2>Gastronomía</h2>
                 <p>Lugares para disfrutar tu tipo de comida preferida, o para descubrir nuevos horizontes gastronómicos. ¡Atrévete a explorarlos!</p>
             </div>
-        </div>
-        <div class="acordeon">
-            <h2 style="color: #FFF;">Turismo <span class="acordeon-icon">+</span></h2>
-            <div class="contenido">
-                <!-- Información del concurso -->
+            <div class="tarjeta tarjeta-overlay">
+                <img src="img/Turismo.svg" alt="Eventos Icon" class="tarjeta-icon">
+                <h2>Turismo</h2>
                 <p>Nuestro hermoso país tiene demasiado para conocer. Nosotros te ayudamos a descubrir los destinos que definitivamente deben estar en tu lista.</p>
             </div>
-        </div>
-        <div class="acordeon">
-            <h2 style="color: #FFF;">Cultura <span class="acordeon-icon">+</span></h2>
-            <div class="contenido">
-                <!-- Información del concurso -->
-                <p>Conocer más nuestras raíces y seguir educándonos, ¡no tiene por qué ser aburrido! Te mostramos cientos de actividades interesantes y divertidas que resaltan nuestra dominicanidad. </p>
+            <div class="tarjeta tarjeta-overlay">
+                <img src="img/Cultura.svg" alt="Eventos Icon" class="tarjeta-icon">
+                <h2>Cultura</h2>
+                <p>Conocer más nuestras raíces y seguir educándonos, ¡no tiene por qué ser aburrido! Te mostramos cientos de actividades interesantes y divertidas que resaltan nuestra dominicanidad.</p>
             </div>
-        </div>
-        <div class="acordeon">
-            <h2 style="color: #FFF;">Vida Nocturna <span class="acordeon-icon">+</span></h2>
-            <div class="contenido">
-                <!-- Información del concurso -->
+            <div class="tarjeta tarjeta-overlay">
+                <img src="img/VidaNocturna.svg" alt="Eventos Icon" class="tarjeta-icon">
+                <h2>Vida Nocturna</h2>
                 <p>¡Llega la noche y se vale una merecida salida! Descubre lugares y actividades que harán de tu noche toda una experiencia de disfrute antiestrés.</p>
-            </div>
-        </div>
-        <div class="acordeon">
-            <h2 style="color: #FFF;">Política de Privacidad <span class="acordeon-icon">+</span></h2>
-            <div class="contenido">
-                <!-- Información de la política de privacidad -->
-                <p>La privacidad y seguridad de tus datos personales son de suma importancia para nosotros. Nos comprometemos a recopilar, almacenar y procesar tus datos de manera responsable y en conformidad con las leyes de protección de datos aplicables, con el objetivo de garantizar su confidencialidad e integridad.</p>
             </div>
         </div>
     </div>
@@ -481,36 +386,5 @@
             <i class="fab fa-instagram"></i> <a href="https://www.instagram.com/descubre.do/" target="_blank">descubre.do</a>
         </div>
     </div>
-    <script>
-        const acordeones = document.querySelectorAll('.acordeon');
-
-        acordeones.forEach(acordeon => {
-            acordeon.addEventListener('click', () => {
-                acordeon.classList.toggle('active');
-            });
-        });
-        // Elemento donde se mostrará el texto dinámico
-        const typedWord = document.getElementById('typed-word');
-
-        // Texto a mostrar en el Typed.js
-        const wordTexts = [
-            'AVENTURA',
-            'EMOCIÓN'
-        ];
-
-        // Configuración de Typed.js
-        const options = {
-            strings: wordTexts,
-            typeSpeed: 80, // Velocidad de tipeo en milisegundos
-            backSpeed: 50, // Velocidad de retroceso en milisegundos
-            startDelay: 1000, // Retraso antes de comenzar a tipear en milisegundos
-            backDelay: 1000, // Retraso antes de retroceder en milisegundos
-            loop: true, // Repetir la animación
-            showCursor: false // Ocultar el cursor de tipeo
-        };
-
-        // Inicializar Typed.js en el elemento
-        const typed = new Typed(typedWord, options);
-    </script>
 </body>
 </html>

@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>DescubreDo</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="icon" href="img/IconoDescrubreNaranja.png" type="image/png">
-    <link href="https://fonts.googleapis.com/css2?family=Nexa:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://unpkg.com/animejs@2.2.0/anime.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <style>
         body {
             margin: 0;
-            font-family: 'Nexa', sans-serif;
+            font-family: 'Poppins', sans-serif;
         }
 
         /* Estilo para los íconos de correo electrónico e Instagram */
@@ -73,7 +76,7 @@
             text-align: left;
         }
 
-        #copyright {
+        #copyrigh {
             text-align: center;
             background-color: #00a4a3;
             color: white;
@@ -84,13 +87,13 @@
             flex-wrap: wrap; /* Permite que los elementos se ajusten en varias filas */
         }
 
-        #copyright .copyright-item {
+        #copyrigh .copyrigh-item {
             margin: 5px; /* Espacio entre elementos */
             display: flex;
             align-items: center;
         }
 
-        #copyright .copyright-item i {
+        #copyrigh .copyrigh-item i {
             margin-right: 5px; /* Espacio entre el icono y el texto */
         }
 
@@ -102,71 +105,12 @@
             color: #00a4a3;
         }
 
-        .contenido {
-            display: none;
-            padding: 10px;
-            color: #FFF;
-        }
-
-        #tarjetas-wrapper {
-    background-color: #fd7d2c;
-    display: flex;
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
-    padding: 40px 0; /* Ajusta el espaciado interno según sea necesario */
-}
-
-#tarjetas-container {
-    max-width: 1200px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-        /* Ajusta el ancho de cada tarjeta para que ocupe el 20% del contenedor */
-        .tarjeta {
-            flex: 1;
-            width: calc(20% - 20px); /* El -20px es para dejar espacio entre las tarjetas */
-            max-width: 200px; /* Ancho máximo de cada tarjeta */
-            padding: 20px;
-            background-color: white;
-            border-radius: 5px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-            color: black;
-            margin-bottom: 40px;
-            margin-top: 40px;
-            text-align: center;
-        }
-
-        /* Estilo para el título de las tarjetas */
-        .tarjeta h2 {
-            font-size: 24px;
-            color: #fd7d2c;
-            margin-top: 10px;
-        }
-
-        .tarjeta p {
-            text-align: center; /* Alinea el párrafo a la izquierda */
-        }
-
-        .tarjeta i {
-            font-size: 36px; /* Tamaño del ícono */
-            margin-bottom: 10px; /* Espacio entre el ícono y el título */
-        }    
-
-        .tarjeta-icon {
-            width: 50px; /* Tamaño deseado para los iconos */
-            height: 50px;
-            margin-bottom: 10px; /* Espacio entre el icono y el título */
-        }
-
         .image-link img {
             width: 30px;
             height: 30px;
         }
 
-        .copyright-item a {
+        .copyrigh-item a {
         color: white;           /* Color blanco para el texto del enlace */
         text-decoration: none;  /* Sin subrayado en el enlace */
         }
@@ -230,27 +174,18 @@
             font-size: 35px; /* Ajusta el tamaño en pantallas más pequeñas */
         }
 
-        #tarjetas-container {
-            flex-direction: column; /* Apila las filas verticalmente en pantallas pequeñas */
-        }
-
-        .tarjeta {
-            flex: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
-            width: 88%; /* Ancho completo en pantallas pequeñas */
-        }
-
         #logo {
         width: 50%; /* Mantén el mismo ancho en pantallas más pequeñas */
         height: 50%; /* Permite que la altura se ajuste automáticamente */
         margin-left: 2px;
         }
 
-        #copyright {
+        #copyrigh {
             flex-direction: column-reverse;
         }
 
         /* Ajustar el margen superior para los elementos individuales */
-        #copyright .copyright-item {
+        #copyrigh .copyrigh-item {
             margin-top: 5px;
         }
     }
@@ -258,8 +193,8 @@
 </head>
 <body>
     <header>
-            <img src="img/LogoDescrubre.png" alt="DescubreDo Logo" id="logo">
-            <div id="header-contact" class="header-icons">
+            <img src="img/LogoDescrubre.png" alt="DescubreDo Logo" id="logo" class="paLaIzquierda">
+            <div id="header-contact" class="header-icons paLaDerecha">
                 <a href="mailto:hola@descubre.do" style="text-decoration: none; color: #FD7D2C;">
                     <i class="far fa-envelope envelope-icon"></i> hola@descubre.do
                 </a>
@@ -271,13 +206,13 @@
 <body>
     <div id="features">
         <div id="features-div">
-            <h3 id="feature_title">¡TODO DESDE UN MISMO LUGAR!</h3>
-            <p>Somos la guía digital más completa en República Dominicana para conocer emocionantes y auténticas experiencias en nuestro hermoso país.</p>
-            <p>Comunicamos de manera dinámica las últimas noticias sobre eventos y actividades para disfrutar en todo el país, con opciones gratuitas y especiales, para todos los gustos.</p>
+            <h3 id="feature_title" class="main-title">¡TODO DESDE UN MISMO LUGAR!</h3>
+            <p class="main-parragraph">Somos la guía digital más completa en República Dominicana para conocer emocionantes y auténticas experiencias en nuestro hermoso país.</p>
+            <p class="main-parragraph">Comunicamos de manera dinámica las últimas noticias sobre eventos y actividades para disfrutar en todo el país, con opciones gratuitas y especiales, para todos los gustos.</p>
         </div>
             <!-- Aquí puedes agregar los campos del formulario -->
             <!-- Mailchimp -->
-        <div id="features-form">
+        <div id="features-form" class="paLaDerecha">
             <div id="mc_embed_shell">
                 <div id="mc_embed_signup">
                     <form action="https://descubre.us9.list-manage.com/subscribe/post?u=32fde870efc72f05d1da03c9c&amp;id=5c1633c6fb&amp;f_id=003414e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
@@ -298,11 +233,11 @@
                             <div class="mc-field-group input-group">
                                 <strong>Temas de preferencia </strong>
                                 <ul>
-                                    <li><input type="checkbox" name="group[52883][1]" id="mce-group[52883]-52883-0" value=""><label for="mce-group[52883]-52883-0">Vida Nocturna</label></li>
-                                    <li><input type="checkbox" name="group[52883][2]" id="mce-group[52883]-52883-1" value=""><label for="mce-group[52883]-52883-1">Cultura</label></li>
-                                    <li><input type="checkbox" name="group[52883][4]" id="mce-group[52883]-52883-2" value=""><label for="mce-group[52883]-52883-2">Turismo</label></li>
-                                    <li><input type="checkbox" name="group[52883][8]" id="mce-group[52883]-52883-3" value=""><label for="mce-group[52883]-52883-3">Gastronomía</label></li>
-                                    <li><input type="checkbox" name="group[52883][16]" id="mce-group[52883]-52883-4" value=""><label for="mce-group[52883]-52883-4">Eventos</label></li>
+                                    <li><input type="checkbox" name="group[52883][1]" id="mce-group[52883]-52883-0" value=""><label for="mce-group[52883]-52883-0"> Vida Nocturna</label></li>
+                                    <li><input type="checkbox" name="group[52883][2]" id="mce-group[52883]-52883-1" value=""><label for="mce-group[52883]-52883-1"> Cultura</label></li>
+                                    <li><input type="checkbox" name="group[52883][4]" id="mce-group[52883]-52883-2" value=""><label for="mce-group[52883]-52883-2"> Turismo</label></li>
+                                    <li><input type="checkbox" name="group[52883][8]" id="mce-group[52883]-52883-3" value=""><label for="mce-group[52883]-52883-3"> Gastronomía</label></li>
+                                    <li><input type="checkbox" name="group[52883][16]" id="mce-group[52883]-52883-4" value=""><label for="mce-group[52883]-52883-4"> Eventos</label></li>
                                 </ul>
                                 <span id="mce-group[52883]-HELPERTEXT" class="helper_text">Puedes escoger más de uno</span>
                             </div>
@@ -346,45 +281,75 @@
                });}(jQuery));var $mcj = jQuery.noConflict(true);</script></div>
         </div>
     </div>
-    <div id="tarjetas-wrapper" style="background-color: #fd7d2c;">
-        <div id="tarjetas-container">
-            <div class="tarjeta tarjeta-overlay">
-                <img src="img/Eventos.svg" alt="Eventos Icon" class="tarjeta-icon">
-                <h2>Eventos</h2>
-                <p>Conciertos, talleres, conferencias, festivales. Todo lo que viene próximamente y que no te puedes perder.</p>
+
+    <div class="wrap section-title">
+        <div class="box">
+          <div class="box-top">
+            <img class="box-image" src="https://images.unsplash.com/photo-1549451371-64aa98a6f660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZXZlbnRvc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Girl Eating Pizza">
+            <div class="title-flex">
+              <h3 class="box-title">Eventos</h3>
             </div>
-            <div class="tarjeta tarjeta-overlay">
-                <img src="img/Gastronomia.svg" alt="Eventos Icon" class="tarjeta-icon">
-                <h2>Gastronomia</h2>
-                <p>Lugares para disfrutar tu tipo de comida preferida, o para descubrir nuevos horizontes gastronómicos. ¡Atrévete a explorarlos!</p>
+            <p class="description">Conciertos, talleres, conferencias, festivales. Todo lo que viene próximamente y que no te puedes perder.</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="box-top">
+            <img class="box-image" src="https://images.unsplash.com/photo-1562447621-5947ec3e4723?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODJ8fGdhc3Ryb25vbWlhfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="Girl Eating Pizza">
+            <div class="title-flex">
+              <h3 class="box-title">Gastronomia</h3>
             </div>
-            <div class="tarjeta tarjeta-overlay">
-                <img src="img/Turismo.svg" alt="Eventos Icon" class="tarjeta-icon">
-                <h2>Turismo</h2>
-                <p>Nuestro hermoso país tiene demasiado para conocer. Nosotros te ayudamos a descubrir los destinos que definitivamente deben estar en tu lista.</p>
+            <p class="description">Lugares para disfrutar tu tipo de comida preferida, o para descubrir nuevos horizontes gastronómicos. ¡Atrévete a explorarlos!</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="box-top">
+            <img class="box-image" src="https://images.unsplash.com/photo-1599595604360-d0d4f7eedf20?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8em9uYSUyMGNvbG9uaWFsfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="Girl Eating Pizza">
+            <div class="title-flex">
+              <h3 class="box-title">Turismo</h3>
             </div>
-            <div class="tarjeta tarjeta-overlay">
-                <img src="img/Cultura.svg" alt="Eventos Icon" class="tarjeta-icon">
-                <h2>Cultura</h2>
-                <p>Conocer más nuestras raíces y seguir educándonos, ¡no tiene por qué ser aburrido! Te mostramos cientos de actividades interesantes y divertidas que resaltan nuestra dominicanidad.</p>
+            <p class="description">Nuestro hermoso país tiene demasiado para conocer. Nosotros te ayudamos a descubrir los destinos que definitivamente deben estar en tu lista.</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="box-top">
+            <img class="box-image" src="https://images.unsplash.com/photo-1597188447214-2257614e5533?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzd8fHRpcGljb3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Girl Eating Pizza">
+            <div class="title-flex">
+              <h3 class="box-title">Cultura</h3>
             </div>
-            <div class="tarjeta tarjeta-overlay">
-                <img src="img/VidaNocturna.svg" alt="Eventos Icon" class="tarjeta-icon">
-                <h2>Vida Nocturna</h2>
-                <p>¡Llega la noche y se vale una merecida salida! Descubre lugares y actividades que harán de tu noche toda una experiencia de disfrute antiestrés.</p>
-            </div>
+            <p class="description">Conocer más nuestras raíces y seguir educándonos, ¡no tiene por qué ser aburrido! Te mostramos cientos de actividades interesantes y divertidas que resaltan nuestra dominicanidad.</p>
+          </div>
         </div>
     </div>
-    <div id="copyright">
-        <div class="copyright-item">
-            <p>&copy; 2023 &bull; ©Descubre DO &bull; Todos los derechos reservados</p>
+    <div id="copyrigh">
+        <div class="copyrigh-item paLaIzquierda">
+            <p style="color: #fff;">&copy; 2023 &bull; ©Descubre DO &bull; Todos los derechos reservados</p>
         </div>
-        <div class="copyright-item">
+        <div class="copyrigh-item paLaDerecha">
             <i class="far fa-envelope"></i> <span>hola@descubre.do</span>
         </div>
-        <div class="copyright-item">
+        <div class="copyrigh-item paLaDerecha">
             <i class="fab fa-instagram"></i> <a href="https://www.instagram.com/descubre.do/" target="_blank">descubre.do</a>
         </div>
     </div>
+    <script>
+        //common reveal options to create reveal animations
+        ScrollReveal({
+          //reset: true,
+          distance: '60px',
+          duration: 2500,
+          delay: 400
+        });
+  
+        //target elements, and specify options to create reveal animations
+        ScrollReveal().reveal('.main-title, .section-title', { delay: 500, origin: 'bottom' });
+        ScrollReveal().reveal('.main-parragraph', { delay: 500, origin: 'top' });
+        ScrollReveal().reveal('.paLaDerecha', { delay: 500, origin: 'right' });
+        ScrollReveal().reveal('.paLaIzquierda', { delay: 500, origin: 'left' });
+        ScrollReveal().reveal('.sec-01 .image, .info', { delay: 600, origin: 'bottom' });
+        ScrollReveal().reveal('.text-box', { delay: 700, origin: 'right' });
+        ScrollReveal().reveal('.media-icons i', { delay: 500, origin: 'bottom', interval: 200 });
+        ScrollReveal().reveal('.sec-02 .image, .sec-03 .image', { delay: 500, origin: 'top' });
+        ScrollReveal().reveal('.media-info li', { delay: 500, origin: 'left' });
+      </script>
 </body>
 </html>

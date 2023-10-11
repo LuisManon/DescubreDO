@@ -1,7 +1,7 @@
 
 /* MailChimp Form BACKUP
 Embed Code - Classic - 12/17/2015 v10.7 */
-#mc_embed_signup form {display:block; position:relative; text-align:left; margin: 20px; background-color: #ffffff; padding: 20px;box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);width: 90%;}
+#mc_embed_signup form {display:block; position:relative; text-align:left; margin: 20px; background-color: #ffffff; padding: 20px;width: 90%;}
 #mc_embed_signup h2 {font-weight:bold; padding:0; margin:15px 0; font-size:1.4em;}
 #mc_embed_signup input {border: 2px solid #00a4a3; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;}
 #mc_embed_signup input[type=checkbox]{-webkit-appearance:checkbox;}

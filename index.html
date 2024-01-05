@@ -44,28 +44,32 @@
         }
 
         #main-content h1 {
-            font-size: 36px;
+            font-size: 50px; /* Tamaño de fuente más grande */
+            font-weight: bold; /* Texto en negrita */
             margin-bottom: 20px;
         }
 
-        #main-content h3 {
-            font-size: 20px;
-            margin-bottom: 30px;
+        #main-content h2 {
+            font-size: 25px; /* Tamaño de fuente más grande para párrafos */
+            width: 35%;
+            margin: 0 auto;
         }
+
+
 
         #main-content button {
             display: inline-block;
-      padding: 10px 20px;
-      font-size: 1.5em; /* Tamaño de fuente h2 */
-      text-align: center;
-      text-decoration: none;
-      border-radius: 25px; /* Radio para hacer el botón redondeado */
-      color: #fff; /* Color del texto */
-      background-color: #ff6600; /* Color naranja */
-      cursor: pointer;
-      transition: background-color 0.3s;
-      border: none; /* Elimina el borde */
-      outline: none; /* Elimina el contorno al hacer clic */
+            padding: 10px 20px;
+            font-size: 1.5em; /* Tamaño de fuente h2 */
+            text-align: center;
+            text-decoration: none;
+            border-radius: 25px; /* Radio para hacer el botón redondeado */
+            color: #fff; /* Color del texto */
+            background-color: #ff6600; /* Color naranja */
+            cursor: pointer;
+            transition: background-color 0.3s;
+            border: none; /* Elimina el borde */
+            outline: none; /* Elimina el contorno al hacer clic */
         }
 
         body {
@@ -166,6 +170,18 @@
         }
 
      @media screen and (max-width: 768px) {
+        #main-content h1 {
+            font-size: 35px; /* Tamaño de fuente más grande */
+            font-weight: bold; /* Texto en negrita */
+            margin-bottom: 20px;
+        }
+
+        #main-content h2 {
+            font-size: 20px; /* Tamaño de fuente más grande para párrafos */
+            width: 100%;
+            margin: 0 auto;
+        }
+
         #header-contact {
             display: flex;
             align-items: center;
@@ -234,8 +250,8 @@
     <div id="main">
         <div id="main-content">
             <h1>¡TODO DESDE UN MISMO LUGAR!</h1>
-            <h3>Somos la guía digital más completa en República Dominicana para conocer emocionantes y auténticas experiencias en nuestro hermoso país.</h3>
-            <h3>Comunicamos de manera dinámica las últimas noticias sobre eventos y actividades para disfrutar en todo el país, con opciones gratuitas y especiales, para todos los gustos.</h3>
+            <h2>Somos la guía digital más completa en República Dominicana para conocer emocionantes y auténticas experiencias en nuestro hermoso país.</h2>
+            <br>
             <button><a href="#" class="scroll-to-form">Descubre más</a></button>
         </div>
     </div>
@@ -445,6 +461,11 @@
         // Agrega un ícono animado cada 3 segundos (ajusta según tus preferencias)
         setInterval(addAnimatedIcon, 3000);
         });
+
+                // Agrega un evento de desplazamiento al documento
+        window.onscroll = function () {
+            scrollFunction();
+        };
 
       </script>
 </body>

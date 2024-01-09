@@ -55,8 +55,6 @@
             margin: 0 auto;
         }
 
-
-
         #main-content button {
             display: inline-block;
             padding: 10px 20px;
@@ -91,6 +89,7 @@
             margin-bottom: 15px; /* Ajusta el valor según la separación deseada */
         }
 
+        .heart-icon,
         .envelope-icon,
         .instagram-icon {
             color: #00a4a3; /* Cambia el color de los íconos a #00a4a3 */
@@ -170,6 +169,7 @@
         }
 
      @media screen and (max-width: 768px) {
+
         #main-content h1 {
             font-size: 35px; /* Tamaño de fuente más grande */
             font-weight: bold; /* Texto en negrita */
@@ -236,17 +236,21 @@
 </head>
 <body>
     <header>
-            <img src="img/LogoDescrubre.png" alt="DescubreDo Logo" id="logo" class="paLaIzquierda">
-            <div id="header-contact" class="header-icons paLaDerecha">
-                <a href="mailto:hola@descubre.do" style="text-decoration: none; color: #FD7D2C;">
-                    <i class="far fa-envelope envelope-icon"></i> hola@descubre.do
-                </a>
-                <a href="https://www.instagram.com/descubre.do/" target="_blank" style="text-decoration: none; color: #FD7D2C;">
-                    <i class="fab fa-instagram instagram-icon"></i> descubre.do
-                </a>
-            </div>
+
+        <img src="img/LogoDescrubre.png" alt="DescubreDo Logo" id="logo" class="paLaIzquierda">
+        <div id="header-contact" class="header-icons paLaDerecha">
+            <a href="nosotros.html" style="text-decoration: none; color: #FD7D2C;">
+                <i class="far fa-heart heart-icon"></i> Nosotros
+            </a>
+            <a href="mailto:hola@descubre.do" style="text-decoration: none; color: #FD7D2C;">
+                <i class="far fa-envelope envelope-icon"></i> hola@descubre.do
+            </a>
+            <a href="https://www.instagram.com/descubre.do/" target="_blank" style="text-decoration: none; color: #FD7D2C;">
+                <i class="fab fa-instagram instagram-icon"></i> descubre.do
+            </a>
+        </div>
     </header>
-<body>
+<body>  
     <div id="main">
         <div id="main-content">
             <h1>¡TODO DESDE UN MISMO LUGAR!</h1>
@@ -375,7 +379,6 @@
                    });}(jQuery));var $mcj = jQuery.noConflict(true);</script></div>
             </div>
         </div>
-
     </div>
 
     <div id="copyrigh">
@@ -467,6 +470,10 @@
             scrollFunction();
         };
 
+        function toggleMenu() {
+        var menu = document.querySelector('.menu');
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        }
       </script>
 </body>
 </html>

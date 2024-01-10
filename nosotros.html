@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PDF Viewer</title>
+    <script type="text/javascript" src="pdfobject.min.js"></script>
     <style>
         body, html {
             margin: 0;
@@ -13,15 +14,31 @@
         }
 
         #pdfViewer {
-            width: 100vw;
-            height: 100vh;
+            width: 100%;
+            height: 100%;
         }
     </style>
 </head>
 <body>
 
+    <div id="pdfViewer"></div>
 
-    <iframe id="pdfViewer" src="pdf/presentacion.pdf" width="100%" height="100%" style="border: none;"></iframe>
+    <script>
+        // Path to your PDF file
+        const pdfPath = 'pdf/presentacion.pdf';
+
+        // PDFObject options
+        const options = {
+            pdfOpenParams: {
+                view: "FitV"
+            },
+            height: "100%",
+            width: "100%"
+        };
+
+        // Embed the PDF using PDFObject
+        PDFObject.embed(pdfPath, "#pdfViewer", options);
+    </script>
 
 </body>
 </html>

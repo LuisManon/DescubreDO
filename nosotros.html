@@ -1,44 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDF Viewer</title>
-    <script type="text/javascript" src="pdfobject.min.js"></script>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden;
-        }
-
-        #pdfViewer {
-            width: 100%;
-            height: 100%;
-        }
-    </style>
+    <link rel="icon" href="img/IconoDescrubreNaranja.png" type="image/png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
+    <link rel="stylesheet" href="css/nosotrosStyle.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>Descubre.do • Nosotros</title>
 </head>
 <body>
+    <div class="div1 sr" data-sr="enter bottom, scale up 20%, reset">
+        <div class="card sr" data-sr="enter right, wait 0.2s">
+            <img src="img/LogoDescrubre.png" alt="Logo Descubre" class="logo sr" data-sr="zoom 10%, wait 0.4s">
+        </div>
+    </div>
 
-    <div id="pdfViewer"></div>
+    <div class="div2 sr" data-sr="enter bottom, scale up 20%, reset">
+        <div class="content">
+            <div class="left sr" data-sr="enter left, wait 0.2s">
+                <h2 style="color: #FD7D2C;">¿QUÉ ES?</h2>
+                <p style="color: #00a4a3;">Una plataforma digital que se esfuerza por convertirse en la guía online definitiva para la República Dominicana. Brindamos a nuestros usuarios acceso a las últimas noticias, eventos y planes en la ciudad, tanto gratuitos como de pago.</p>
+                <p style="color: #00a4a3;">¡Encuentra todo lo que necesitas saber para explorar y disfrutar al máximo todo lo que nuestro país tiene para ofrecer!</p>
+            </div>
+            <div class="right sr" data-sr="enter right, wait 0.2s">
+                <img src="img/quees.png" alt="Imagen de preferencia" class="primeraImagen sr" data-sr="zoom 10%, wait 0.4s">
+            </div>
+        </div>
+    </div>
+
+    <div class="div3 sr" data-sr="enter bottom, scale up 20%, reset">
+        <div class="content">
+            <div class="left2 sr" data-sr="enter left, wait 0.2s">
+                <img src="img/objetivos.png" alt="Imagen de preferencia" class="primeraImagen sr" data-sr="zoom 10%, wait 0.4s">
+            </div>
+            <div class="right2 sr" data-sr="enter right, wait 0.2s">
+                <h2 style="color: #FFFFFF;">OBJETIVOS</h2>
+                <p style="color: #FFFFFF;">Ser la guía preferida para aquellos que deseen conocer nuestro país de una forma única, sumergiéndose en su cultura, gastronomía y mucho más.</p>
+                <p style="color: #FFFFFF;">Además, nos enorgullece apoyar la economía local al promover y destacar los lugares y experiencias auténticas que solo se pueden encontrar en la República Dominicana.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="div4 sr" style="background-color: #FD7D2C;">
+        <p>
+            <span class="highlight-text">EXPLORA</span>
+            <span class="con-text">,</span>
+            <span class="highlight-text">  DESCUBRE<br> </span>
+            <span class="con-text">Y </span>
+            <span class="highlight-text">DISFRUTA</span>
+            <span class="con-text">CON</span>
+        </p>
+        <img src="img/LogoBlanco.png" alt="Imagen de preferencia" class="logoDescubre sr" data-sr="zoom 10%, wait 0.4s">
+    </div>
+
+    <div id="copyrigh">
+        <div class="copyrigh-item paLaIzquierda sr" data-sr="enter left, wait 0.2s">
+            <p style="color: #fff;">&copy; 2023 &bull; ©Descubre DO &bull; Todos los derechos reservados</p>
+        </div>
+        <div class="copyrigh-item paLaDerecha sr" data-sr="enter right, wait 0.2s">
+            <i class="far fa-envelope"></i> <span>hola@descubre.do</span>
+        </div>
+        <div class="copyrigh-item paLaDerecha sr" data-sr="enter right, wait 0.2s">
+            <i class="fab fa-instagram"></i> <a href="https://www.instagram.com/descubre.do/" target="_blank">descubre.do</a>
+        </div>
+    </div>
 
     <script>
-        // Path to your PDF file
-        const pdfPath = 'pdf/presentacion.pdf';
-
-        // PDFObject options
-        const options = {
-            pdfOpenParams: {
-                view: "FitV"
-            },
-            height: "100%",
-            width: "100%"
-        };
-
-        // Embed the PDF using PDFObject
-        PDFObject.embed(pdfPath, "#pdfViewer", options);
+        ScrollReveal().reveal('.sr', {
+            duration: 1000,
+            delay: 200,
+            easing: 'ease-in-out',
+            reset: true
+        });
     </script>
-
 </body>
 </html>

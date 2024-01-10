@@ -1,0 +1,206 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Define tus estilos CSS aquí según sea necesario */
+
+.div1 {
+    background-color: #00a4a3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh; /* Ajusta la altura según tus necesidades */
+    position: relative; /* Permite el posicionamiento absoluto del logo dentro de .div1 */
+}
+
+.card {
+    border-radius: 20px;
+    background-color: white;
+    padding: 130px;
+    /* Agrega margen alrededor del card para ver el fondo de .div1 */
+    margin: 20px;
+    width: 80%; 
+    height: 40%;
+}
+
+.logo {
+    /* Define el tamaño que desees para el logo */
+    width: 600px; /* Puedes ajustar el valor según tus preferencias */
+    height: 150px; /* Esto mantiene la proporción original del logo */
+    position: absolute;
+    left: 70%; /* Coloca el logo en el centro horizontal */
+    transform: translateX(-50%); /* Centra el logo correctamente */
+    /* Puedes ajustar left y translateX según sea necesario para mover el logo */
+    /* Ejemplo: Para mover a la derecha, podrías usar right: 10px; en lugar de left y transform */
+}
+
+.div2 {
+    background-color: #FFF;
+    color: white;
+    text-align: center;
+    padding: 50px 50px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left {
+    flex: 1;
+    padding-left: 100px;
+}
+
+.right {
+    flex: 1;
+    
+}
+
+/* Añade estas reglas para ajustar el estilo del texto en el div2 */
+.div2 h2 {
+    font-size: 3em; /* Tamaño de fuente más grande */
+    font-weight: bold; /* Texto en negrita */
+    text-align: left; /* Alineación a la izquierda */
+    margin-bottom: 10px; /* Espacio inferior */
+}
+
+.div2 p {
+    max-width: 600px; /* Ancho máximo de los párrafos */
+    margin-bottom: 10px; /* Espacio inferior */
+    text-align: left;
+    font-size: 30px;
+}
+
+
+.primeraImagen {
+    width: 500px; /* Puedes ajustar el valor según tus preferencias */
+    height: 450px; /* Esto mantiene la proporción original del logo */
+}
+
+.div3 {
+    background-color: #00a4a3;
+    color: white;
+    text-align: center;
+    padding: 50px 50px;
+}
+
+.left2 {
+    flex: 1;
+    padding-left: 100px;
+}
+
+.right2 {
+    flex: 1;
+    
+}
+
+/* Añade estas reglas para ajustar el estilo del texto en el div2 */
+.div2 h2 {
+    font-size: 3em; /* Tamaño de fuente más grande */
+    font-weight: bold; /* Texto en negrita */
+    text-align: left; /* Alineación a la izquierda */
+    margin-bottom: 10px; /* Espacio inferior */
+}
+
+.div2 p {
+    max-width: 600px; /* Ancho máximo de los párrafos */
+    margin-bottom: 10px; /* Espacio inferior */
+    text-align: left;
+    font-size: 30px;
+}
+
+.div3 h2 {
+    font-size: 3em; /* Tamaño de fuente más grande */
+    font-weight: bold; /* Texto en negrita */
+    text-align: left; /* Alineación a la izquierda */
+    margin-bottom: 10px; /* Espacio inferior */
+}
+
+.div3 p {
+    max-width: 600px; /* Ancho máximo de los párrafos */
+    margin-bottom: 10px; /* Espacio inferior */
+    text-align: left;
+    font-size: 30px;
+}
+
+.div4 {
+    background-color: #FFFFFF;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.div4 p {
+    font-size: 4em; /* Ajusta el tamaño del párrafo según tus necesidades */
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.highlight-text {
+    color: #FFF;
+}
+
+.con-text {
+    color: #00a4a3;
+}
+
+.logoDescubre {
+    /* Estilo para el tamaño del logo */
+    width: 500px; /* Ajusta el tamaño del logo según tus necesidades */
+    height: auto; /* Mantiene la proporción original del logo */
+}
+
+#copyrigh {
+    text-align: center;
+    background-color: #00a4a3;
+    color: white;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias filas */
+}
+
+#copyrigh .copyrigh-item {
+    margin: 5px; /* Espacio entre elementos */
+    display: flex;
+    align-items: center;
+}
+
+#copyrigh .copyrigh-item i {
+    margin-right: 5px; /* Espacio entre el icono y el texto */
+}
+
+.copyrigh-item a {
+color: white;           /* Color blanco para el texto del enlace */
+text-decoration: none;  /* Sin subrayado en el enlace */
+}
+
+/* Agrega reglas para pantallas más pequeñas */
+@media only screen and (max-width: 768px) {
+    .card {
+        padding: 30px; /* Ajusta el padding para pantallas más pequeñas */
+        margin: 10px; /* Ajusta el margen para pantallas más pequeñas */
+    }
+
+    .logo {
+        width: 80%; /* Ajusta el tamaño del logo para pantallas más pequeñas */
+    }
+
+    .content {
+        flex-direction: column; /* Cambia a disposición de columna en pantallas más pequeñas */
+        text-align: center; /* Alinea el texto al centro en pantallas más pequeñas */
+    }
+
+    .left,
+    .right {
+        padding: 20px; /* Ajusta el padding para pantallas más pequeñas */
+    }
+
+    .primeraImagen {
+        width: 100%; /* Haz que la imagen ocupe todo el ancho del contenedor en pantallas más pequeñas */
+        height: auto; /* Mantiene la proporción original de la imagen */
+    }
+}

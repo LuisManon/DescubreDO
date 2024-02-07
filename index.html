@@ -32,7 +32,7 @@
             background-image: url('img/banner001.png');
             background-size: cover;
             background-position: center;
-            filter: brightness(0.8); /* Ajusta la opacidad de la imagen de fondo */
+            filter: brightness(0.4); /* Ajusta la opacidad de la imagen de fondo */
         }
 
         #main-content {
@@ -44,7 +44,7 @@
         }
 
         #main-content h1 {
-            font-size: 50px; /* Tamaño de fuente más grande */
+            font-size: 60px; /* Tamaño de fuente más grande */
             font-weight: bold; /* Texto en negrita */
             margin-bottom: 20px;
         }
@@ -65,9 +65,10 @@
             color: #fff; /* Color del texto */
             background-color: #FD7D2C; /* Color naranja */
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: background-color 0.4s;
             border: none; /* Elimina el borde */
             outline: none; /* Elimina el contorno al hacer clic */
+            transition: transform 0.3s ease;
         }
 
         body {
@@ -83,17 +84,26 @@
         }
 
         .main-parragraph {
-            font-size: 18px;
-            font-weight: 500;
+            font-size: 22px;
+            font-weight: bold;
             line-height: 1.5;
             margin-bottom: 15px; /* Ajusta el valor según la separación deseada */
         }
 
-        .heart-icon,
+        .fa-tiktok,
         .envelope-icon,
         .instagram-icon {
             color: #00a4a3; /* Cambia el color de los íconos a #00a4a3 */
             margin-left: 10px; /* Agrega margen izquierdo entre los íconos */
+        }
+
+        a:hover {
+            transform: scale(1.2); /* Ajusta el tamaño al 120% */
+            transition: transform 0.3s ease; /* Animación suave */
+        }
+
+        button:hover {
+            transform: scale(1.2); /* Ajusta el tamaño al 120% */
         }
 
         header {
@@ -151,7 +161,7 @@
 
         /* Estilo para el div con la clase "formulario" */
         .formulario {
-            background-color: #ff6600;
+            background-color: #FD7D2C;
             padding: 50px; /* Ajusta el padding según tus necesidades */
         }
 
@@ -162,24 +172,51 @@
             align-items: center;
         }
 
+        #features {
+            background-color: white;
+            color: black;
+            display: flex;
+            flex-direction: row; /* Cambia la dirección de flex a fila */
+            justify-content: center;
+            align-items: center;
+            /*background-image: url('img/Banner.png');*/
+            background-color: #FD7D2C;
+            background-size: auto;
+            background-position: center center;
+            background-repeat: no-repeat;
+            height: 800px;
+            margin-bottom: 0;
+        }
+
+        #features-div {
+            flex: 1; /* Ambos divs ocuparán el 50% del espacio disponible */
+            max-width: 40%; /* Cambia el ancho máximo a un valor menor, como el 40% */
+            padding: 0 20px; /* Ajusta el espacio interno si es necesario */
+            text-align: left;
+            margin-left: 100px; /* Agrega margen izquierdo para separar de la izquierda */
+            margin-right: 100px; /* Agrega un espacio (gap) a la derecha */
+        }
         #features-form {
-            max-width: 700px; /* Establece el ancho máximo que desees */
-            width: 100%; /* Haz que ocupe el ancho completo del contenedor padre */
-            box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+            flex: 1; /* Ambos divs ocuparán el 50% del espacio disponible */
+            max-width: 60%; /* Cambia el ancho máximo a un valor mayor, como el 60% */
+            padding: 0 20px; /* Ajusta el espacio interno si es necesario */
+            text-align: left;
         }
 
      @media screen and (max-width: 768px) {
 
         #main-content h1 {
-            font-size: 35px; /* Tamaño de fuente más grande */
+            font-size: 38px; /* Tamaño de fuente más grande */
             font-weight: bold; /* Texto en negrita */
             margin-bottom: 20px;
         }
 
         #main-content h2 {
-            font-size: 20px; /* Tamaño de fuente más grande para párrafos */
-            width: 100%;
+            font-size: 35px;
+            width: 35%;
             margin: 0 auto;
+            text-align: center; /* Alinear el texto al centro */
+            line-height: 1.6; /* Ajustar la altura de línea para controlar el espacio entre líneas */
         }
 
         #header-contact {
@@ -191,6 +228,11 @@
         #header-contact a {
             font-size: 14px; /* Ajusta el tamaño del texto */
             margin-left: 10px; /* Agrega margen izquierdo entre los elementos */
+        }
+
+        a:hover {
+            transform: scale(1.2); /* Ajusta el tamaño al 120% */
+            transition: transform 0.3s ease; /* Animación suave */
         }
 
         .header-icons {
@@ -236,17 +278,17 @@
 </head>
 <body>
     <header>
-
         <img src="img/LogoDescrubre.png" alt="DescubreDo Logo" id="logo" class="paLaIzquierda">
         <div id="header-contact" class="header-icons paLaDerecha">
-            <a href="nosotros.html" style="text-decoration: none; color: #FD7D2C;">
-                <i class="far fa-heart heart-icon"></i> Nosotros
-            </a>
-            <a href="mailto:hola@descubre.do" style="text-decoration: none; color: #FD7D2C;">
-                <i class="far fa-envelope envelope-icon"></i> hola@descubre.do
+            <p style="font-weight: bold; color: #FD7D2C; ">Contactanos</p>
+            <a href="https://www.tiktok.com/@descubre.do" target="_blank" style="text-decoration: none; color: #FD7D2C;">
+                <i class="fa-brands fa-tiktok"></i>
             </a>
             <a href="https://www.instagram.com/descubre.do/" target="_blank" style="text-decoration: none; color: #FD7D2C;">
-                <i class="fab fa-instagram instagram-icon"></i> descubre.do
+                <i class="fab fa-instagram instagram-icon"></i>
+            </a>
+            <a href="mailto:hola@descubre.do" style="text-decoration: none; color: #FD7D2C;">
+                <i class="far fa-envelope envelope-icon"></i>
             </a>
         </div>
     </header>
@@ -254,13 +296,15 @@
     <div id="main">
         <div id="main-content" class="info">
             <h1>¡TODO DESDE UN MISMO LUGAR!</h1>
-            <h2>Somos la guía digital más completa en República Dominicana para conocer emocionantes y auténticas experiencias en nuestro hermoso país.</h2>
+            <h2>Somos la guía digital más completa en</h2>
+            <h2>República Dominicana para conocer emocionantes</h2>
+            <h2>y auténticas experiencias en nuestro hermoso país.</h2>
             <br>
             <button><a href="#" class="scroll-to-form">Descubre más</a></button>
         </div>
     </div>
 
-    <div class="wrap section-title">
+    <div class="wrap">
         <div class="box">
             <div class="box-top">
                 <img class="box-image" src="https://images.unsplash.com/photo-1549451371-64aa98a6f660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZXZlbnRvc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Girl Eating Pizza">
@@ -272,7 +316,7 @@
         </div>
         <div class="box">
           <div class="box-top">
-            <img class="box-image" src="https://images.unsplash.com/photo-1562447621-5947ec3e4723?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODJ8fGdhc3Ryb25vbWlhfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="Girl Eating Pizza">
+            <img class="box-image" src="https://images.unsplash.com/photo-1595255669512-144851438b8b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Girl Eating Pizza">
             <div class="title-flex">
               <h3 class="box-title">Gastronomia</h3>
             </div>
@@ -308,88 +352,96 @@
         </div>
     </div>
 
-    <div class="formulario">
-        <div id="features-auch">
-            <div id="features-form" class="paLaDerecha">
-                <div id="mc_embed_shell">
-                    <div id="mc_embed_signup">
-                        <form action="https://descubre.us9.list-manage.com/subscribe/post?u=32fde870efc72f05d1da03c9c&amp;id=5c1633c6fb&amp;f_id=003414e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-                            <div id="mc_embed_signup_scroll">
-                                <div class="indicates-required"><span class="asterisk">*</span> indica requerido</div>
-                                <div class="mc-field-group">
-                                    <label for="mce-FNAME">Nombre <span class="asterisk">*</span></label>
-                                    <input type="text" name="FNAME" class="required text" id="mce-FNAME" required="" value="">
-                                </div>
-                                <div class="mc-field-group">
-                                    <label for="mce-LNAME">Apellido <span class="asterisk">*</span></label>
-                                    <input type="text" name="LNAME" class="required text" id="mce-LNAME" required="" value="">
-                                </div>
-                                <div class="mc-field-group">
-                                    <label for="mce-EMAIL">Correo Electronico <span class="asterisk">*</span></label>
-                                    <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value="">
-                                </div>
-                                <div class="mc-field-group input-group">
-                                    <strong>Temas de preferencia </strong>
-                                    <ul>
-                                        <li><input type="checkbox" name="group[52883][1]" id="mce-group[52883]-52883-0" value=""><label for="mce-group[52883]-52883-0"> Vida Nocturna</label></li>
-                                        <li><input type="checkbox" name="group[52883][2]" id="mce-group[52883]-52883-1" value=""><label for="mce-group[52883]-52883-1"> Cultura</label></li>
-                                        <li><input type="checkbox" name="group[52883][4]" id="mce-group[52883]-52883-2" value=""><label for="mce-group[52883]-52883-2"> Turismo</label></li>
-                                        <li><input type="checkbox" name="group[52883][8]" id="mce-group[52883]-52883-3" value=""><label for="mce-group[52883]-52883-3"> Gastronomía</label></li>
-                                        <li><input type="checkbox" name="group[52883][16]" id="mce-group[52883]-52883-4" value=""><label for="mce-group[52883]-52883-4"> Eventos</label></li>
-                                    </ul>
-                                    <span id="mce-group[52883]-HELPERTEXT" class="helper_text">Puedes escoger más de uno</span>
-                                </div>
-                                <div class="mc-field-group size1of2">
-                                    <label for="mce-BIRTHDAY-month">Fecha de cumpleaños </label>
-                                    <div class="datefield"><span class="subfield dayfield">
-                                        <input class="birthday REQ_CSS" type="text" pattern="[0-9]*" placeholder="DD" size="2" maxlength="2" name="BIRTHDAY[day]" id="mce-BIRTHDAY-day" value=""></span> /<span class="subfield monthfield"><input class="birthday REQ_CSS" type="text" pattern="[0-9]*" placeholder="MM" size="2" maxlength="2" name="BIRTHDAY[month]" id="mce-BIRTHDAY-month" value=""></span><span class="small-meta nowrap">( dd / mm )</span>
-                                    </div>
-                                </div>
-                                <div hidden=""><input type="hidden" name="tags" value="12732055"></div>
-                                <div id="mce-responses" class="clear">
-                                    <div class="response" id="mce-error-response" style="display: none;"></div>
-                                    <div class="response" id="mce-success-response" style="display: none;"></div>
-                                </div><div aria-hidden="true" style="position: absolute; left: -5000px;"><input type="text" name="b_32fde870efc72f05d1da03c9c_5c1633c6fb" tabindex="-1" value=""></div><div class="clear"><input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribirme"></div>
+    <div id="features">
+        <div id="features-div">
+            <h3 id="feature_title" class="main-title">¡Registrate y ser parte de nuestra comunidad!</h3>
+            <p class="main-parragraph">Queremos que estes presente siempre al tanto de Descubre.</p>
+            <p class="main-parragraph">Comunicamos de manera dinámica las últimas noticias sobre eventos y actividades para disfrutar en todo el país, con opciones gratuitas y especiales, para todos los gustos.</p>
+        </div>
+            <!-- Aquí puedes agregar los campos del formulario -->
+            <!-- Mailchimp -->
+        <div id="features-form" class="paLaDerecha">
+            <div id="mc_embed_shell">
+                <div id="mc_embed_signup">
+                    <form action="https://descubre.us9.list-manage.com/subscribe/post?u=32fde870efc72f05d1da03c9c&amp;id=5c1633c6fb&amp;f_id=003414e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                        <div id="mc_embed_signup_scroll">
+                            <div class="indicates-required"><span class="asterisk">*</span> indica requerido</div>
+                            <div class="mc-field-group">
+                                <label for="mce-FNAME">Nombre <span class="asterisk">*</span></label>
+                                <input type="text" name="FNAME" class="required text" id="mce-FNAME" required="" value="">
                             </div>
-                        </form>
-                    </div>
+                            <div class="mc-field-group">
+                                <label for="mce-LNAME">Apellido <span class="asterisk">*</span></label>
+                                <input type="text" name="LNAME" class="required text" id="mce-LNAME" required="" value="">
+                            </div>
+                            <div class="mc-field-group">
+                                <label for="mce-EMAIL">Correo Electronico <span class="asterisk">*</span></label>
+                                <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value="">
+                            </div>
+                            <div class="mc-field-group input-group">
+                                <strong>Temas de preferencia </strong>
+                                <ul>
+                                    <li><input type="checkbox" name="group[52883][1]" id="mce-group[52883]-52883-0" value=""><label for="mce-group[52883]-52883-0"> Vida Nocturna</label></li>
+                                    <li><input type="checkbox" name="group[52883][2]" id="mce-group[52883]-52883-1" value=""><label for="mce-group[52883]-52883-1"> Cultura</label></li>
+                                    <li><input type="checkbox" name="group[52883][4]" id="mce-group[52883]-52883-2" value=""><label for="mce-group[52883]-52883-2"> Turismo</label></li>
+                                    <li><input type="checkbox" name="group[52883][8]" id="mce-group[52883]-52883-3" value=""><label for="mce-group[52883]-52883-3"> Gastronomía</label></li>
+                                    <li><input type="checkbox" name="group[52883][16]" id="mce-group[52883]-52883-4" value=""><label for="mce-group[52883]-52883-4"> Eventos</label></li>
+                                </ul>
+                                <span id="mce-group[52883]-HELPERTEXT" class="helper_text">Puedes escoger más de uno</span>
+                            </div>
+                            <div class="mc-field-group size1of2">
+                                <label for="mce-BIRTHDAY-month">Fecha de cumpleaños </label>
+                                <div class="datefield"><span class="subfield dayfield">
+                                    <input class="birthday REQ_CSS" type="text" pattern="[0-9]*" placeholder="DD" size="2" maxlength="2" name="BIRTHDAY[day]" id="mce-BIRTHDAY-day" value=""></span> /<span class="subfield monthfield"><input class="birthday REQ_CSS" type="text" pattern="[0-9]*" placeholder="MM" size="2" maxlength="2" name="BIRTHDAY[month]" id="mce-BIRTHDAY-month" value=""></span><span class="small-meta nowrap">( dd / mm )</span>
+                                </div>
+                            </div>
+                            <div hidden=""><input type="hidden" name="tags" value="12732055"></div>
+                            <div id="mce-responses" class="clear">
+                                <div class="response" id="mce-error-response" style="display: none;"></div>
+                                <div class="response" id="mce-success-response" style="display: none;"></div>
+                            </div><div aria-hidden="true" style="position: absolute; left: -5000px;"><input type="text" name="b_32fde870efc72f05d1da03c9c_5c1633c6fb" tabindex="-1" value=""></div><div class="clear"><input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribirme"></div>
+                        </div>
+                    </form>
                 </div>
-                <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[0]='EMAIL';ftypes[0]='email';fnames[5]='BIRTHDAY';ftypes[5]='birthday';/*
-                    * Translated default messages for the $ validation plugin.
-                    * Locale: ES
-                    */
-                   $.extend($.validator.messages, {
-                     required: "Este campo es obligatorio.",
-                     remote: "Por favor, rellena este campo.",
-                     email: "Por favor, escribe una dirección de correo válida",
-                     url: "Por favor, escribe una URL válida.",
-                     date: "Por favor, escribe una fecha válida.",
-                     dateISO: "Por favor, escribe una fecha (ISO) válida.",
-                     number: "Por favor, escribe un número entero válido.",
-                     digits: "Por favor, escribe sólo dígitos.",
-                     creditcard: "Por favor, escribe un número de tarjeta válido.",
-                     equalTo: "Por favor, escribe el mismo valor de nuevo.",
-                     accept: "Por favor, escribe un valor con una extensión aceptada.",
-                     maxlength: $.validator.format("Por favor, no escribas más de {0} caracteres."),
-                     minlength: $.validator.format("Por favor, no escribas menos de {0} caracteres."),
-                     rangelength: $.validator.format("Por favor, escribe un valor entre {0} y {1} caracteres."),
-                     range: $.validator.format("Por favor, escribe un valor entre {0} y {1}."),
-                     max: $.validator.format("Por favor, escribe un valor menor o igual a {0}."),
-                     min: $.validator.format("Por favor, escribe un valor mayor o igual a {0}.")
-                   });}(jQuery));var $mcj = jQuery.noConflict(true);</script></div>
             </div>
+            <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[0]='EMAIL';ftypes[0]='email';fnames[5]='BIRTHDAY';ftypes[5]='birthday';/*
+                * Translated default messages for the $ validation plugin.
+                * Locale: ES
+                */
+               $.extend($.validator.messages, {
+                 required: "Este campo es obligatorio.",
+                 remote: "Por favor, rellena este campo.",
+                 email: "Por favor, escribe una dirección de correo válida",
+                 url: "Por favor, escribe una URL válida.",
+                 date: "Por favor, escribe una fecha válida.",
+                 dateISO: "Por favor, escribe una fecha (ISO) válida.",
+                 number: "Por favor, escribe un número entero válido.",
+                 digits: "Por favor, escribe sólo dígitos.",
+                 creditcard: "Por favor, escribe un número de tarjeta válido.",
+                 equalTo: "Por favor, escribe el mismo valor de nuevo.",
+                 accept: "Por favor, escribe un valor con una extensión aceptada.",
+                 maxlength: $.validator.format("Por favor, no escribas más de {0} caracteres."),
+                 minlength: $.validator.format("Por favor, no escribas menos de {0} caracteres."),
+                 rangelength: $.validator.format("Por favor, escribe un valor entre {0} y {1} caracteres."),
+                 range: $.validator.format("Por favor, escribe un valor entre {0} y {1}."),
+                 max: $.validator.format("Por favor, escribe un valor menor o igual a {0}."),
+                 min: $.validator.format("Por favor, escribe un valor mayor o igual a {0}.")
+               });}(jQuery));var $mcj = jQuery.noConflict(true);</script></div>
         </div>
     </div>
 
     <div id="copyrigh">
         <div class="copyrigh-item paLaIzquierda">
-            <p style="color: #fff;">&copy; 2023 &bull; ©Descubre DO &bull; Todos los derechos reservados</p>
+            <p style="color: #fff;">&copy; 2024 &bull; ©Descubre DO &bull; Todos los derechos reservados</p>
+        </div>
+        <div class="copyrigh-item paLaDerecha">
+            <i class="fa-brands fa-tiktok" style="color: #fff;"></i> <a href="https://www.tiktok.com/@descubre.do" target="_blank"></a>
+        </div>
+        <div class="copyrigh-item paLaDerecha">
+            <i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/descubre.do/" target="_blank"></a>
         </div>
         <div class="copyrigh-item paLaDerecha">
             <i class="far fa-envelope"></i> <span>hola@descubre.do</span>
-        </div>
-        <div class="copyrigh-item paLaDerecha">
-            <i class="fab fa-instagram"></i> <a href="https://www.instagram.com/descubre.do/" target="_blank">descubre.do</a>
         </div>
     </div>
     <script>
@@ -421,48 +473,6 @@
                 scrollTop: target.offset().top
             }, 1000); // Ajusta la duración del desplazamiento según tus preferencias
         });
-        });
-
-        $(document).ready(function () {
-        // Lista de iconos que se utilizarán
-        var icons = ["fa-heart", "fa-star", "fa-thumbs-up", "fa-smile", "fa-sun"];
-
-        // Función para obtener un ícono aleatorio
-        function getRandomIcon() {
-            var randomIndex = Math.floor(Math.random() * icons.length);
-            return icons[randomIndex];
-        }
-
-        // Función para agregar un ícono animado al formulario
-        function addAnimatedIcon() {
-            var iconClass = getRandomIcon();
-            var icon = $("<i>").addClass("fas " + iconClass).css({
-                position: "absolute",
-                top: Math.random() * 100 + "%", // Posición vertical aleatoria
-                left: Math.random() * 100 + "%", // Posición horizontal aleatoria
-                fontSize: Math.random() * 2 + 1 + "em", // Tamaño de fuente aleatorio
-                color: "white", // Color del icono
-                animationDuration: Math.random() * 2 + 1 + "s" // Duración de la animación aleatoria
-            });
-
-            // Agrega el ícono al formulario
-            $("#features-auch").append(icon);
-
-            // Utiliza la librería Anime.js para animar la opacidad del ícono
-            anime({
-                targets: icon[0],
-                opacity: 0,
-                duration: 2000, // Duración de la animación de opacidad
-                easing: 'linear',
-                complete: function () {
-                    // Remueve el ícono después de la animación
-                    icon.remove();
-                }
-            });
-        }
-
-        // Agrega un ícono animado cada 3 segundos (ajusta según tus preferencias)
-        setInterval(addAnimatedIcon, 3000);
         });
 
                 // Agrega un evento de desplazamiento al documento

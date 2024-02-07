@@ -37,7 +37,7 @@ a {
 
 .wrap {
   display: flex;
-  justify: space-between;
+  justify-content: center;
   align-items: stretch;
   width: 100%;
   gap: 24px;
@@ -68,6 +68,21 @@ a {
   height: 360px;
   object-fit: cover;
   object-position: 50% 20%;
+  transition: transform 0.3s ease;
+}
+
+.box:hover .box-image{
+  transform: scale(1.2); /* Escalar al 120% y desplazar hacia abajo 10px en hover */
+  transition: transform 0.3s ease; /* Agregar transición de transformación */
+}
+
+.box:hover .box-title{
+  transform: scale(1.2) translateY(30px) translateX(-13px); /* Escalar al 120% y desplazar hacia abajo 10px en hover */
+  transition: transform 0.3s ease; /* Agregar transición de transformación */
+}
+.box:hover .description {
+  transform: scale(1.2) translateY(40px);/* Escalar al 120% y desplazar hacia abajo 10px en hover */
+  transition: transform 0.3s ease; /* Agregar transición de transformación */
 }
 
 .title-flex {

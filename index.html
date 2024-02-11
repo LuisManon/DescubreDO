@@ -50,9 +50,12 @@
         }
 
         #main-content h2 {
-            font-size: 25px; /* Tamaño de fuente más grande para párrafos */
+            font-size: 25px;
             width: 35%;
-            margin: 0 auto;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            line-height: 1.6;
         }
 
         #main-content button {
@@ -149,9 +152,9 @@
         #feature_title {
             flex: 1;
             font-size: 50px;
-            font-weight: 600;
+            font-weight: bold;
             margin: 10px 0;
-            color: #00a4a3;
+            color: white;
         }
 
         .image-link img {
@@ -280,7 +283,7 @@
     <header>
         <img src="img/LogoDescrubre.png" alt="DescubreDo Logo" id="logo" class="paLaIzquierda">
         <div id="header-contact" class="header-icons paLaDerecha">
-            <p style="font-weight: bold; color: #FD7D2C; ">Contactanos</p>
+            <p style="font-weight: bold; color: #FD7D2C; ">Contáctanos</p>
             <a href="https://www.tiktok.com/@descubre.do" target="_blank" style="text-decoration: none; color: #FD7D2C;">
                 <i class="fa-brands fa-tiktok"></i>
             </a>
@@ -316,9 +319,9 @@
         </div>
         <div class="box">
           <div class="box-top">
-            <img class="box-image" src="https://images.unsplash.com/photo-1595255669512-144851438b8b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Girl Eating Pizza">
+            <img class="box-image" src="https://images.unsplash.com/photo-1665331745878-9524fbec8729?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Girl Eating Pizza">
             <div class="title-flex">
-              <h3 class="box-title">Gastronomia</h3>
+              <h3 class="box-title">Gastronomía</h3>
             </div>
             <p class="description">Lugares para disfrutar tu tipo de comida preferida, o para descubrir nuevos horizontes gastronómicos. ¡Atrévete a explorarlos!</p>
           </div>
@@ -354,7 +357,8 @@
 
     <div id="features">
         <div id="features-div">
-            <h3 id="feature_title" class="main-title">¡Registrate y ser parte de nuestra comunidad!</h3>
+            <h3 id="feature_title" class="main-title">¡Regístrate y se parte de nuestra comunidad!</h3>
+            <br>
             <p class="main-parragraph">Queremos que estes presente siempre al tanto de Descubre.</p>
             <p class="main-parragraph">Comunicamos de manera dinámica las últimas noticias sobre eventos y actividades para disfrutar en todo el país, con opciones gratuitas y especiales, para todos los gustos.</p>
         </div>
@@ -375,7 +379,7 @@
                                 <input type="text" name="LNAME" class="required text" id="mce-LNAME" required="" value="">
                             </div>
                             <div class="mc-field-group">
-                                <label for="mce-EMAIL">Correo Electronico <span class="asterisk">*</span></label>
+                                <label for="mce-EMAIL">Correo Electrónico <span class="asterisk">*</span></label>
                                 <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value="">
                             </div>
                             <div class="mc-field-group input-group">

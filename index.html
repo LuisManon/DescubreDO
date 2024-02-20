@@ -20,6 +20,12 @@
             position: relative;
             overflow: hidden;
             min-height: 100vh;
+            background-image: url('img/banner001.png');
+            background-size: cover;
+            background-position: center;
+            display: flex; /* Usamos flexbox */
+            justify-content: center; /* Centra horizontalmente */
+            align-items: center; /* Centra verticalmente */
         }
 
         #main::before {
@@ -32,29 +38,23 @@
             background-image: url('img/banner001.png');
             background-size: cover;
             background-position: center;
-            filter: brightness(0.4); /* Ajusta la opacidad de la imagen de fondo */
+            filter: brightness(0.4); /* Aplicamos el filtro solo a la imagen de fondo */
         }
 
         #main-content {
-            position: relative;
-            z-index: 1; /* Asegura que el contenido esté sobre la imagen de fondo */
             text-align: center;
             color: white;
-            padding: 40vh 20px 20vh; /* Ajusta el espaciado interno según sea necesario */
         }
 
         #main-content h1 {
-            font-size: 60px; /* Tamaño de fuente más grande */
-            font-weight: bold; /* Texto en negrita */
+            font-size: 60px;
+            font-weight: bold;
             margin-bottom: 20px;
         }
 
         #main-content h2 {
             font-size: 25px;
-            width: 35%;
-            margin-left: auto;
-            margin-right: auto;
-            text-align: center;
+            margin-bottom: 10px;
             line-height: 1.6;
         }
 
@@ -208,6 +208,29 @@
 
      @media screen and (max-width: 768px) {
 
+        header {
+        flex-direction: column; /* Cambia el flujo de flexbox a columna */
+        align-items: center; /* Centra horizontalmente los elementos */
+        }
+
+        #logo {
+            width: 50%; /* Hace que el logo sea más grande */
+        }
+
+        .header-icons a {
+        font-size: 24px; /* Aumenta el tamaño de los iconos */
+        margin-left: 10px;
+        margin-bottom: 5px; /* Agrega espacio entre los iconos */
+        }
+
+        #header-contact {
+            margin-top: 10px; /* Agrega espacio entre el logo y los iconos */
+        }
+
+        #header-contact p {
+            display: none; /* Oculta el párrafo "Contáctanos" */
+        }
+
         #main-content h1 {
             font-size: 38px; /* Tamaño de fuente más grande */
             font-weight: bold; /* Texto en negrita */
@@ -222,27 +245,10 @@
             line-height: 1.6; /* Ajustar la altura de línea para controlar el espacio entre líneas */
         }
 
-        #header-contact {
-            display: flex;
-            align-items: center;
-            margin-right: 20px; /* Agrega un margen a la derecha para separar del logo */
-        }
-
-        #header-contact a {
-            font-size: 14px; /* Ajusta el tamaño del texto */
-            margin-left: 10px; /* Agrega margen izquierdo entre los elementos */
-        }
 
         a:hover {
             transform: scale(1.2); /* Ajusta el tamaño al 120% */
             transition: transform 0.3s ease; /* Animación suave */
-        }
-
-        .header-icons {
-            flex-direction: column; /* Coloca los íconos uno debajo del otro */
-            align-items: flex-end; /* Alinea los íconos a la derecha */
-            margin-right: 0; /* Elimina el margen derecho en pantallas pequeñas */
-            margin-top: 10px; /* Agrega margen superior entre el logo y los íconos */
         }
 
         .envelope-icon,
@@ -260,12 +266,6 @@
 
         #feature_title {
             font-size: 35px; /* Ajusta el tamaño en pantallas más pequeñas */
-        }
-
-        #logo {
-        width: 50%; /* Mantén el mismo ancho en pantallas más pequeñas */
-        height: 50%; /* Permite que la altura se ajuste automáticamente */
-        margin-left: 2px;
         }
 
         #copyrigh {

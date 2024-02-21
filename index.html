@@ -42,23 +42,28 @@
         }
 
         #main-content {
-            text-align: center;
             color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centra horizontalmente el contenido */
         }
 
         #main-content h1 {
+            text-align: center;
             font-size: 60px;
             font-weight: bold;
             margin-bottom: 20px;
         }
 
         #main-content h2 {
+            text-align: center;
             font-size: 25px;
             margin-bottom: 10px;
             line-height: 1;
         }
 
         #main-content h3 {
+            text-align: center;
             font-size: 25px;
             margin-bottom: 10px;
             line-height: 1;
@@ -231,6 +236,10 @@
             display: none; /* Oculta el párrafo "Contáctanos" */
         }
 
+        #main-content {
+            align-items: flex-start; /* Alinea el contenido a la izquierda en pantallas pequeñas */
+        }
+
         #main-content h1 {
             font-size: 50px; /* Aumenta el tamaño de la fuente */
             margin-top: 15px; /* Baja más el título */
@@ -252,7 +261,7 @@
 
         #main-content button {
             text-align: left; /* Cambia la alineación del texto a la izquierda */
-            margin-left: 0px; /* Ajusta el margen izquierdo para separar del borde */
+            margin-left: 10px; /* Ajusta el margen izquierdo para separar del borde */
             margin-top: 10px; /* Ajusta el margen superior para separar de otros elementos */
         }
         /* Ajustar la altura de línea para controlar el espacio entre líneas line-height: 1.6;  */

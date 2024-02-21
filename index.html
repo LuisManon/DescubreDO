@@ -157,7 +157,6 @@
         }
 
         #feature_title {
-            flex: 1;
             font-size: 50px;
             font-weight: bold;
             margin: 10px 0;
@@ -183,19 +182,13 @@
         }
 
         #features {
-            background-color: white;
-            color: black;
+            background-color: #FD7D2C; /* Cambiado el color de fondo */
+            color: white; /* Cambiado el color del texto */
             display: flex;
-            flex-direction: row; /* Cambia la dirección de flex a fila */
+            flex-direction: row; /* Cambiado a dirección de columna */
             justify-content: center;
             align-items: center;
-            /*background-image: url('img/Banner.png');*/
-            background-color: #FD7D2C;
-            background-size: auto;
-            background-position: center center;
-            background-repeat: no-repeat;
-            height: 800px;
-            margin-bottom: 0;
+            padding-top: 50px; /* Agregado un padding superior para separar los elementos */
         }
 
         #features-div {
@@ -480,7 +473,7 @@
         });
   
         //target elements, and specify options to create reveal animations
-        ScrollReveal().reveal('.main-title, .box', { delay: 500, origin: 'bottom' });
+        //ScrollReveal().reveal('.main-title, .box', { delay: 500, origin: 'bottom' });
         ScrollReveal().reveal('.main-parragraph', { delay: 500, origin: 'top' });
         ScrollReveal().reveal('.paLaDerecha', { delay: 500, origin: 'right' });
         ScrollReveal().reveal('.paLaIzquierda', { delay: 500, origin: 'left' });

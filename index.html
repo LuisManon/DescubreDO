@@ -58,6 +58,13 @@
             line-height: 1;
         }
 
+        #main-content h3 {
+            font-size: 25px;
+            margin-bottom: 10px;
+            line-height: 1;
+            max-width: 670px;
+        }
+
         #main-content button {
             display: inline-block;
             padding: 10px 20px;
@@ -145,8 +152,8 @@
         }
 
         .copyrigh-item a {
-        color: white;           /* Color blanco para el texto del enlace */
-        text-decoration: none;  /* Sin subrayado en el enlace */
+            color: white;           /* Color blanco para el texto del enlace */
+            text-decoration: none;  /* Sin subrayado en el enlace */
         }
 
         #feature_title {
@@ -240,13 +247,11 @@
         }
 
         #main-content h2 {
-            font-size: 25px; /* Reducir el tamaño de la fuente */
-            text-align: left; /* Alinear a la izquierda */
-            margin-left: 10px;
-            line-height: 1;
+            display: none;
         }
 
         #main-content h3 {
+            font-size: 25px; /* Reducir el tamaño de la fuente */
             text-align: left; /* Alinear a la izquierda */
             margin-left: 10px;
             line-height: 1;
@@ -309,7 +314,7 @@
             <h2>Somos la guía digital más completa en</h2>
             <h2>República Dominicana para conocer emocionantes</h2>
             <h2>y auténticas experiencias en nuestro hermoso país.</h2>
-            <h3>Somos la guía digital más completa en República Dominicana para conocer emocionantes y auténticas experiencias en nuestro hermoso país.</p>
+            <h3>Somos la guía digital más completa en República Dominicana para conocer emocionantes y auténticas experiencias en nuestro hermoso país.</h3>
             <br>
             <button><a href="#" class="scroll-to-form">Descubre más</a></button>
         </div>
@@ -496,6 +501,24 @@
         var menu = document.querySelector('.menu');
             menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
         }
+
+        window.addEventListener('DOMContentLoaded', function() {
+        const h3Element = document.querySelector('#main-content h3');
+
+        function handleScreenSizeChange() {
+            if (window.matchMedia('(max-width: 768px)').matches) {
+                h3Element.style.display = 'block';
+            } else {
+                h3Element.style.display = 'none';
+            }
+        }
+
+            // Verificar el tamaño de la pantalla al cargar la página
+            handleScreenSizeChange();
+
+            // Verificar el tamaño de la pantalla cuando cambia el tamaño de la ventana
+            window.addEventListener('resize', handleScreenSizeChange);
+        });
       </script>
 </body>
 </html>

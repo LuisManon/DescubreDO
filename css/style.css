@@ -110,7 +110,7 @@ a {
 }
 
 /* RESPONSIVE QUERIES */
-/* RESPONSIVE QUERIES */
+
 @media (min-width: 320px) {
   .title-flex {
     display: flex;
@@ -133,6 +133,10 @@ a {
   .user-follow-info {
     margin-top: 6px;
   }
+
+  .wrap {
+    gap: 0px;
+  }
 }
 
 @media (min-width: 640px) {
@@ -147,6 +151,10 @@ a {
   }
   .user-follow-info {
     margin-top: 6px;
+  }
+
+  .wrap {
+    gap: 0px;
   }
 }
 
